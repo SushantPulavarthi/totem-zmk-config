@@ -231,6 +231,118 @@
             bindings = <&kp LC(W) &kp V>;
             label = "VSPLIT";
         };
+
+        double_underscore: double_underscore {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "Double Underscore";
+            bindings = <&kp UNDER &kp UNDER>;
+        };
+
+        double_lt: double_lt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "Double Less Than";
+            bindings = <&kp LT &kp LT>;
+        };
+
+        double_gt: double_gt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "Double Greater Than";
+            bindings = <&kp GT &kp GT>;
+        };
+
+        double_slash: double_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "Double Slash";
+            bindings = <&kp SLASH &kp SLASH>;
+        };
+
+        double_bslash: double_bslash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "Double Backslash";
+            bindings = <&kp BACKSLASH &kp BACKSLASH>;
+        };
+
+        double_hash: double_hash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "Double Hash";
+            bindings = <&kp HASH &kp HASH>;
+        };
+
+        triple_speech: triple_speech {
+            compatible = "zmk,behavior-macro";
+            label = "Triple Speech";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp DQT>;
+        };
+
+        triple_quote: triple_quote {
+            compatible = "zmk,behavior-macro";
+            label = "Triple Quote";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp SQT>;
+        };
+
+        triple_eq: triple_eq {
+            compatible = "zmk,behavior-macro";
+            label = "Triple Equals";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp EQUAL &kp EQUAL>;
+        };
+
+        triple_backslash: triple_backslash {
+            compatible = "zmk,behavior-macro";
+            label = "Triple Backslash";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH &kp BACKSLASH &kp BACKSLASH>;
+        };
+
+        triple_zero: triple_zero {
+            compatible = "zmk,behavior-macro";
+            label = "Triple Zero";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N0 &kp N0>;
+        };
+
+        triple_dot: triple_dot {
+            compatible = "zmk,behavior-macro";
+            label = "Triple Dot";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp DOT>;
+        };
+
+        double_pipe: double_pipe {
+            compatible = "zmk,behavior-macro";
+            label = "Space Double Pipe Space";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp PIPE &kp PIPE &kp SPACE>;
+        };
+
+        double_equal: double_equal {
+            compatible = "zmk,behavior-macro";
+            label = "Space Double Equal Space";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp EQUAL &kp EQUAL &kp SPACE>;
+        };
+
+        double_amp: double_amp {
+            compatible = "zmk,behavior-macro";
+            label = "Space Double Ampersand Space";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp AMPS &kp AMPS &kp SPACE>;
+        };
+
+        double_bang: double_bang {
+            compatible = "zmk,behavior-macro";
+            label = "Space Bang Equal Space";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp EXCL &kp EQUAL &kp SPACE>;
+        };
     };
 
     behaviors {
