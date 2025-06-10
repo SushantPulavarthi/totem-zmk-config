@@ -118,7 +118,7 @@
         };
 
         combo_speech {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&triple_speech>;
             key-positions = <11 13>;
         };
 
@@ -128,43 +128,43 @@
         };
 
         combo_leq {
-            bindings = <&none>;
+            bindings = <&leq>;
             key-positions = <3 13>;
         };
 
         combo_from {
-            bindings = <&none>;
+            bindings = <&from>;
             key-positions = <2 12>;
         };
 
         combo_geq2 {
-            bindings = <&none>;
+            bindings = <&geq2>;
             key-positions = <6 16>;
         };
 
         combo_to {
-            bindings = <&none>;
+            bindings = <&combo_to>;
             key-positions = <7 17>;
         };
 
         combo_geq1 {
-            bindings = <&none>;
+            bindings = <&geq1>;
             key-positions = <13 24>;
         };
 
         combo_hsplit {
-            bindings = <&none>;
+            bindings = <&hsplit>;
             key-positions = <11 22>;
         };
 
         combo_vsplit {
-            bindings = <&none>;
+            bindings = <&vsplit>;
             key-positions = <22 23>;
         };
 
         combo_numword {
             bindings = <&none>;
-            key-positions = <32 36>;
+            key-positions = <36 33>;
         };
     };
 
@@ -190,7 +190,7 @@
             label = "FROM";
         };
 
-        to: to {
+        combo_to: to {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp SPACE &kp MINUS &kp GT &kp SPACE>;
@@ -278,7 +278,11 @@
             compatible = "zmk,behavior-macro";
             label = "Triple Speech";
             #binding-cells = <0>;
-            bindings = <&kp DQT &kp DQT &kp DQT>;
+            bindings =
+                <&macro_tap>,
+                <&kp DQT>,
+                <&macro_press>,
+                <&kp DQT &kp DQT &kp DQT>;
         };
 
         triple_quote: triple_quote {
