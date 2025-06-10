@@ -29,10 +29,7 @@
     tapping-term-ms = <170>;
 };
 
-
-&num_word {
-  continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL J K AT_SIGN V G LS(G)>;
-};
+&num_word { continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL J K AT_SIGN V G LS(G)>; };
 
 / {
     combos {
@@ -100,7 +97,7 @@
 
         combo_dollar {
             bindings = <&kp DOLLAR>;
-            key-positions = <27 28>;
+            key-positions = <28 29>;
         };
 
         combo_close_window {
@@ -568,9 +565,9 @@
             label = "NUMBERS";
             bindings = <
         &trans  &kp N7  &kp N8  &kp N9  &trans       &trans  &kp AT_SIGN  &trans  &trans  &trans
-        &kp N0  &kp N4  &kp N5  &kp N6  &kp LS(G)    &trans  &kp J            &kp K   &trans  &trans
-&trans  &trans  &kp N1  &kp N2  &kp N3  &kp V        &trans  &trans           &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &trans  &trans           &trans
+        &kp N0  &kp N4  &kp N5  &kp N6  &kp LS(G)    &trans  &kp J        &kp K   &trans  &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &kp V        &trans  &trans       &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans       &trans  &trans       &trans
             >;
         };
 
