@@ -44,7 +44,7 @@
         };
 
         combo_eq {
-            bindings = <&HT_Double_Equal 0 0>;
+            bindings = <&HT_Double_Equal 0 EQUAL>;
             key-positions = <6 7>;
         };
 
@@ -114,12 +114,12 @@
         };
 
         combo_speech {
-            bindings = <&HT_Triple_Speech 0 0>;
+            bindings = <&HT_Triple_Speech 0 DQT>;
             key-positions = <11 13>;
         };
 
         combo_quotes {
-            bindings = <&HT_Triple_Quote 0 0>;
+            bindings = <&HT_Triple_Quote 0 SQT>;
             key-positions = <16 18>;
         };
 
@@ -362,6 +362,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp SEMICOLON>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -532,9 +533,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp Q                 &kp W  &kp E      &kp R            &kp T        &kp Y               &kp U        &kp I                   &kp O                         &kp P
-              &kp A                 &kp S  &kp D      &kp F            &kp G        &kp H               &kp J        &kp K                   &kp L                         &colon_switch
-&lt 3 ESCAPE  &mt UNDERSCORE MINUS  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA               &HT_Triple_Dot 0 0 &HT_Double_Slash 0 0 &key_repeat
+              &kp Q                 &kp W  &kp E      &kp R            &kp T        &kp Y               &kp U        &kp I                   &kp O                 &kp P
+              &kp A                 &kp S  &kp D      &kp F            &kp G        &kp H               &kp J        &kp K                   &kp L                 &colon_switch
+&lt 3 ESCAPE  &mt UNDERSCORE MINUS  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA               &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH  &key_repeat
                                            &kp LCTRL  &lt 1 BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt 4 SPACE  &lt 2 LEFT_PARENTHESIS
             >;
         };
@@ -548,10 +549,10 @@
         sym_layer {
             label = "SYMBOLS";
             bindings = <
-        &kp TILDE  &kp PLUS                           &kp MINUS                              &kp PERCENT                           &kp LS(NUMBER_3)                    &trans                                 &kp AT    &HT_Double_Pipe 0 0 &kp CARET  &kp BSPC
-        &trans     &kp LBRC                           &kp STAR                               &kp RBRC                              &HT_Double_Bslash 0 0 &HT_Triple_Apostrophe 0 0 &kp LPAR  &kp QMARK                       &kp RPAR   &HT_Double_Hash 0 0
-&trans  &trans     &HT_Double_LT 0 0 &HT_Double_Bang 0 0 &HT_Double_GT 0 0 &trans                              &HT_Double_Underscore 0 0 &kp LBKT  &kp AMPS                        &kp RBKT   &trans                          &trans
-                                                      &trans                                 &trans                                &trans                              &trans                                 &trans    &trans
+        &kp TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp LS(NUMBER_3)            &trans                              &kp AT    &HT_Double_Pipe 0 PIPE  &kp CARET  &kp BSPC
+        &trans     &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR  &kp QMARK               &kp RPAR   &HT_Double_Hash 0 HASH
+&trans  &trans     &HT_Double_LT 0 LT  &HT_Double_Bang 0 EXCLAMATION  &HT_Double_GT 0 GT  &trans                      &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT  &kp AMPS                &kp RBKT   &trans                  &trans
+                                       &trans                         &trans              &trans                      &trans                              &trans    &trans
             >;
         };
 
