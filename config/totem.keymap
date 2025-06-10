@@ -44,7 +44,7 @@
         };
 
         combo_eq {
-            bindings = <&HT_Double_Equal>;
+            bindings = <&HT_Double_Equal 0 0>;
             key-positions = <6 7>;
         };
 
@@ -114,12 +114,12 @@
         };
 
         combo_speech {
-            bindings = <&HT_Triple_Speech>;
+            bindings = <&HT_Triple_Speech 0 0>;
             key-positions = <11 13>;
         };
 
         combo_quotes {
-            bindings = <&HT_Triple_Quote>;
+            bindings = <&HT_Triple_Quote 0 0>;
             key-positions = <16 18>;
         };
 
@@ -362,7 +362,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp SEMICOLON>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -371,6 +370,7 @@
             label = "HT_Double_Underscore";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_underscore>, <&kp UNDER>;
         };
 
@@ -379,6 +379,7 @@
             label = "HT_Double_Less_Than";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_lt>, <&kp LT>;
         };
 
@@ -387,6 +388,7 @@
             label = "HT_Double_Greater_Than";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_gt>, <&kp GT>;
         };
 
@@ -395,6 +397,7 @@
             label = "HT_Double_Slash";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_slash>, <&kp SLASH>;
         };
 
@@ -403,6 +406,7 @@
             label = "HT_Double_Backslash";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_bslash>, <&kp BACKSLASH>;
         };
 
@@ -411,6 +415,7 @@
             label = "HT_Double_Hash";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_hash>, <&kp HASH>;
         };
 
@@ -419,6 +424,7 @@
             label = "HT_Triple_Speech";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&triple_speech>, <&kp DQT>;
         };
 
@@ -427,6 +433,7 @@
             label = "HT_Triple_Quote";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&triple_quote>, <&kp SQT>;
         };
 
@@ -435,6 +442,7 @@
             label = "HT_Triple_Equals";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&triple_eq>, <&kp EQUAL>;
         };
 
@@ -443,6 +451,7 @@
             label = "HT_Triple_Zero";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&triple_zero>, <&kp N0>;
         };
 
@@ -451,6 +460,7 @@
             label = "HT_Triple_Dot";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&triple_dot>, <&kp DOT>;
         };
 
@@ -459,6 +469,7 @@
             label = "HT_Double_Pipe";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_pipe>, <&kp PIPE>;
         };
 
@@ -467,6 +478,7 @@
             label = "HT_Double_Equal";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_equal>, <&kp EQUAL>;
         };
 
@@ -475,6 +487,7 @@
             label = "HT_Double_Amps";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_amp>, <&kp AMPS>;
         };
 
@@ -483,6 +496,7 @@
             label = "HT_Double_Bang";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&double_bang>, <&kp EXCL>;
         };
 
@@ -491,6 +505,7 @@
             label = "HT_Triple_Apostrophe";
             flavor = "hold-preferred";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&triple_apostrophe>, <&kp APOSTROPHE>;
         };
     };
@@ -517,9 +532,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp Q                 &kp W  &kp E      &kp R            &kp T        &kp Y               &kp U        &kp I                   &kp O           &kp P
-              &kp A                 &kp S  &kp D      &kp F            &kp G        &kp H               &kp J        &kp K                   &kp L           &colon_switch
-&lt 3 ESCAPE  &mt UNDERSCORE MINUS  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA               &HT_Triple_Dot  &HT_Double_Slash  &key_repeat
+              &kp Q                 &kp W  &kp E      &kp R            &kp T        &kp Y               &kp U        &kp I                   &kp O                         &kp P
+              &kp A                 &kp S  &kp D      &kp F            &kp G        &kp H               &kp J        &kp K                   &kp L                         &colon_switch
+&lt 3 ESCAPE  &mt UNDERSCORE MINUS  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA               &HT_Triple_Dot 0 0 &HT_Double_Slash 0 0 &key_repeat
                                            &kp LCTRL  &lt 1 BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt 4 SPACE  &lt 2 LEFT_PARENTHESIS
             >;
         };
@@ -533,10 +548,10 @@
         sym_layer {
             label = "SYMBOLS";
             bindings = <
-        &kp TILDE  &kp PLUS       &kp MINUS        &kp PERCENT    &kp LS(NUMBER_3)     &trans                 &kp AT    &HT_Double_Pipe  &kp CARET  &kp BSPC
-        &trans     &kp LBRC       &kp STAR         &kp RBRC       &HT_Double_Bslash    &HT_Triple_Apostrophe  &kp LPAR  &kp QMARK        &kp RPAR   &HT_Double_Hash
-&trans  &trans     &HT_Double_LT  &HT_Double_Bang  &HT_Double_GT  &trans               &HT_Double_Underscore  &kp LBKT  &kp AMPS         &kp RBKT   &trans           &trans
-                                  &trans           &trans         &trans               &trans                 &trans    &trans
+        &kp TILDE  &kp PLUS                           &kp MINUS                              &kp PERCENT                           &kp LS(NUMBER_3)                    &trans                                 &kp AT    &HT_Double_Pipe 0 0 &kp CARET  &kp BSPC
+        &trans     &kp LBRC                           &kp STAR                               &kp RBRC                              &HT_Double_Bslash 0 0 &HT_Triple_Apostrophe 0 0 &kp LPAR  &kp QMARK                       &kp RPAR   &HT_Double_Hash 0 0
+&trans  &trans     &HT_Double_LT 0 0 &HT_Double_Bang 0 0 &HT_Double_GT 0 0 &trans                              &HT_Double_Underscore 0 0 &kp LBKT  &kp AMPS                        &kp RBKT   &trans                          &trans
+                                                      &trans                                 &trans                                &trans                              &trans                                 &trans    &trans
             >;
         };
 
