@@ -44,7 +44,7 @@
         };
 
         combo_eq {
-            bindings = <&double_equal>;
+            bindings = <&HT_Double_Equal>;
             key-positions = <6 7>;
         };
 
@@ -114,12 +114,12 @@
         };
 
         combo_speech {
-            bindings = <&triple_speech>;
+            bindings = <&HT_Triple_Speech>;
             key-positions = <11 13>;
         };
 
         combo_quotes {
-            bindings = <&triple_quote>;
+            bindings = <&HT_Triple_Quote>;
             key-positions = <16 18>;
         };
 
@@ -365,12 +365,132 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        HT_Double_Underscore: hold_tap_double_underscore {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Underscore";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_underscore>, <&kp UNDER>;
+        };
+
+        HT_Double_LT: hold_tap_double_LT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Less_Than";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_lt>, <&kp LT>;
+        };
+
+        HT_Double_GT: hold_tap_double_GT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Greater_Than";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_gt>, <&kp GT>;
+        };
+
+        HT_Double_Slash: hold_tap_double_slash {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Slash";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_slash>, <&kp SLASH>;
+        };
+
+        HT_Double_Bslash: hold_tap_double_bslash {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Backslash";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_bslash>, <&kp BACKSLASH>;
+        };
+
+        HT_Double_Hash: hold_tap_double_hash {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Hash";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_hash>, <&kp HASH>;
+        };
+
         HT_Triple_Speech: hold_tap_triple_speech {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_Triple_Speech";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             bindings = <&triple_speech>, <&kp DQT>;
+        };
+
+        HT_Triple_Quote: hold_tap_triple_quote {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Triple_Quote";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&triple_quote>, <&kp SQT>;
+        };
+
+        HT_Triple_Eq: hold_tap_triple_eq {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Triple_Equals";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&triple_eq>, <&kp EQUAL>;
+        };
+
+        HT_Triple_Zero: hold_tap_triple_zero {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Triple_Zero";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&triple_zero>, <&kp N0>;
+        };
+
+        HT_Triple_Dot: hold_tap_triple_dot {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Triple_Dot";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&triple_dot>, <&kp DOT>;
+        };
+
+        HT_Double_Pipe: hold_tap_double_pipe {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Pipe";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_pipe>, <&kp PIPE>;
+        };
+
+        HT_Double_Equal: hold_tap_double_equal {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Equal";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_equal>, <&kp EQUAL>;
+        };
+
+        HT_Double_Amps: hold_tap_double_amps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Amps";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_amp>, <&kp AMPS>;
+        };
+
+        HT_Double_Bang: hold_tap_double_bang {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Double_Bang";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&double_bang>, <&kp EXCL>;
+        };
+
+        HT_Triple_Apostrophe: hold_tap_triple_apostrophe {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_Triple_Apostrophe";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&triple_apostrophe>, <&kp APOSTROPHE>;
         };
     };
 
@@ -398,7 +518,7 @@
             bindings = <
               &kp Q                 &kp W  &kp E      &kp R            &kp T        &kp Y               &kp U        &kp I                   &kp O        &kp P
               &kp A                 &kp S  &kp D      &kp F            &kp G        &kp H               &kp J        &kp K                   &kp L        &colon_switch
-&lt 3 ESCAPE  &mt UNDERSCORE MINUS  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA               &triple_dot  &double_slash  &key_repeat
+&lt 3 ESCAPE  &mt UNDERSCORE MINUS  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA               &HT_Triple_Dot &HT_Double_Slash &key_repeat
                                            &kp LCTRL  &lt 1 BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt 4 SPACE  &lt 2 LEFT_PARENTHESIS
             >;
         };
@@ -412,9 +532,9 @@
         sym_layer {
             label = "SYMBOLS";
             bindings = <
-        &kp TILDE  &kp PLUS    &kp MINUS     &kp PERCENT  &kp LS(NUMBER_3)    &trans              &kp AT    &double_pipe  &kp CARET  &kp BSPC
-        &trans     &kp LBRC    &kp STAR      &kp RBRC     &double_bslash      &triple_apostrophe  &kp LPAR  &kp QMARK     &kp RPAR   &double_hash
-&trans  &trans     &double_lt  &double_bang  &double_gt   &trans              &double_underscore  &kp LBKT  &kp AMPS      &kp RBKT   &trans        &trans
+        &kp TILDE  &kp PLUS    &kp MINUS     &kp PERCENT  &kp LS(NUMBER_3)    &trans              &kp AT    &HT_Double_Pipe  &kp CARET  &kp BSPC
+        &trans     &kp LBRC    &kp STAR      &kp RBRC     &HT_Double_Bslash &HT_Triple_Apostrophe &kp LPAR  &kp QMARK     &kp RPAR   &HT_Double_Hash
+&trans  &trans     &HT_Double_LT &HT_Double_Bang &HT_Double_GT &trans              &HT_Double_Underscore &kp LBKT  &kp AMPS      &kp RBKT   &trans        &trans
                                &trans        &trans       &trans              &trans              &trans    &trans
             >;
         };
