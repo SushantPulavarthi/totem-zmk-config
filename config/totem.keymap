@@ -13,6 +13,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <behaviors/num_word.dtsi>
 
 #define BASE 0
 #define NAV  1
@@ -31,11 +32,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        combo_reset {
-            bindings = <&sys_reset>;
-            key-positions = <3 4>;
-        };
 
         combo_ctrl_del {
             bindings = <&kp LC(DELETE)>;
@@ -163,7 +159,7 @@
         };
 
         combo_numword {
-            bindings = <&none>;
+            bindings = <&num_word 2>;
             key-positions = <32 36>;
         };
     };
@@ -172,14 +168,14 @@
         write: write {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp COLON &kp W>;
+            bindings = <&kp ESCAPE &kp COLON &kp W &kp ENTER>;
             label = "WRITE";
         };
 
         quit: quit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(W) &kp Q>;
+            bindings = <&kp LC(W) &kp Q &kp ENTER>;
             label = "QUIT";
         };
 
@@ -351,6 +347,13 @@
             label = "NEW_BEHAVIOR";
             #binding-cells = <1>;
         };
+
+        colon_switch: colon_switch {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -376,7 +379,7 @@
 
             bindings = <
               &kp Q  &kp W  &kp E      &kp R            &kp T        &kp Y               &kp U      &kp I         &kp O    &kp P
-              &kp A  &kp S  &kp D      &kp F            &kp G        &kp H               &kp J      &kp K         &kp L    &mt SEMICOLON COLON
+              &kp A  &kp S  &kp D      &kp F            &kp G        &kp H               &kp J      &kp K         &kp L    &colon_switch
 &lt 3 ESCAPE  &kp Z  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M      &kp COMMA     &kp DOT  &kp FSLH             &key_repeat
                             &kp LCTRL  &lt 1 BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &kp SPACE  &kp LS(LPAR)
             >;
