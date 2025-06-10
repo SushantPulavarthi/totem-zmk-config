@@ -3,7 +3,7 @@
 //                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
 //                                                        █   █  █  █   █  █  █   █  █  █   █
 //                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
+//                                                               █      ▄▄▄█▄▄▄    █   █
 //                                                               ▀      █  █  █     █▄█
 //                                                             ▀▀▀▀▀    █  █  █      ▀
 //                                                                      ▀  ▀  ▀
@@ -277,6 +277,7 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         sym_layer {
+            label = "SYMBOLS";
             bindings = <
         &kp TILDE  &kp PLUS       &kp MINUS  &kp PERCENT  &kp LS(NUMBER_3)    &trans     &kp AT    &kp PIPE   &kp CARET  &kp BSPC
         &trans     &kp LBRC       &kp STAR   &kp RBRC     &kp BSLH            &kp GRAVE  &kp LPAR  &kp QMARK  &kp RPAR   &kp POUND
@@ -286,6 +287,7 @@
         };
 
         number_layer {
+            label = "NUMBERS";
             bindings = <
         &trans  &kp N7  &kp N8  &kp N9  &trans       &trans  &kp LS(AT_SIGN)  &trans  &trans  &trans
         &kp N0  &kp N4  &kp N5  &kp N6  &kp LS(G)    &trans  &kp J            &kp K   &trans  &trans
@@ -295,6 +297,7 @@
         };
 
         fun_layer {
+            label = "FUNCTIONS";
             bindings = <
         &trans  &kp F7  &kp F8  &kp F9  &kp F12    &trans  &trans  &trans  &trans  &trans
         &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans
@@ -304,6 +307,7 @@
         };
 
         nav_layer {
+            label = "NAV";
             bindings = <
         &trans           &kp PG_UP       &mmv MOVE_UP     &kp PG_DN          &kp END          &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
         &kp PRINTSCREEN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
@@ -313,6 +317,7 @@
         };
 
         game_layer {
+            label = "GAMING";
             bindings = <
         &kp T      &kp Q  &kp W   &kp E   &kp R     &trans  &trans  &trans  &trans  &trans
         &kp LSHFT  &kp A  &kp S   &kp D   &kp F     &trans  &trans  &trans  &trans  &trans
