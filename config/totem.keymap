@@ -352,12 +352,6 @@
     };
 
     behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <1>;
-        };
-
         colon_switch: colon_switch {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -372,7 +366,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_underscore>, <&kp UNDER>;
+            bindings = <&double_underscore>, <&kp>;
         };
 
         HT_Double_LT: ht_double_LT {
@@ -381,7 +375,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_lt>, <&kp LT>;
+            bindings = <&double_lt>, <&kp>;
         };
 
         HT_Double_GT: ht_double_GT {
@@ -390,7 +384,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_gt>, <&kp GT>;
+            bindings = <&double_gt>, <&kp>;
         };
 
         HT_Double_Slash: ht_double_slash {
@@ -399,7 +393,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_slash>, <&kp SLASH>;
+            bindings = <&double_slash>, <&kp>;
         };
 
         HT_Double_Bslash: ht_double_bslash {
@@ -408,7 +402,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_bslash>, <&kp BACKSLASH>;
+            bindings = <&double_bslash>, <&kp>;
         };
 
         HT_Double_Hash: ht_double_hash {
@@ -417,7 +411,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_hash>, <&kp HASH>;
+            bindings = <&double_hash>, <&kp>;
         };
 
         HT_Triple_Speech: ht_triple_speech {
@@ -426,7 +420,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&triple_speech>, <&kp DQT>;
+            bindings = <&triple_speech>, <&kp>;
         };
 
         HT_Triple_Quote: ht_triple_quote {
@@ -435,7 +429,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&triple_quote>, <&kp SQT>;
+            bindings = <&triple_quote>, <&kp>;
         };
 
         HT_Triple_Eq: ht_triple_eq {
@@ -444,7 +438,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&triple_eq>, <&kp EQUAL>;
+            bindings = <&triple_eq>, <&kp>;
         };
 
         HT_Triple_Zero: ht_triple_zero {
@@ -453,7 +447,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&triple_zero>, <&kp N0>;
+            bindings = <&triple_zero>, <&kp>;
         };
 
         HT_Triple_Dot: ht_triple_dot {
@@ -462,7 +456,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&triple_dot>, <&kp DOT>;
+            bindings = <&triple_dot>, <&kp>;
         };
 
         HT_Double_Pipe: ht_double_pipe {
@@ -471,7 +465,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_pipe>, <&kp PIPE>;
+            bindings = <&double_pipe>, <&kp>;
         };
 
         HT_Double_Equal: ht_double_equal {
@@ -480,7 +474,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_equal>, <&kp EQUAL>;
+            bindings = <&double_equal>, <&kp>;
         };
 
         HT_Double_Amps: ht_double_amps {
@@ -489,7 +483,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_amp>, <&kp AMPS>;
+            bindings = <&double_amp>, <&kp>;
         };
 
         HT_Double_Bang: ht_double_bang {
@@ -498,7 +492,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&double_bang>, <&kp EXCL>;
+            bindings = <&double_bang>, <&kp>;
         };
 
         HT_Triple_Apostrophe: ht_triple_apostrophe {
@@ -507,7 +501,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&triple_apostrophe>, <&kp APOSTROPHE>;
+            bindings = <&triple_apostrophe>, <&kp>;
         };
     };
 
