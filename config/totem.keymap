@@ -117,7 +117,7 @@
         };
 
         combo_speech {
-            bindings = <&HT_Triple_Speech 0 DQT>;
+            bindings = <&HT_Triple_Speech 0 GB_DQT>;
             key-positions = <11 13>;
         };
 
@@ -273,21 +273,21 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             label = "Double Backslash";
-            bindings = <&kp BACKSLASH &kp BACKSLASH>;
+            bindings = <&kp GB_BSLH &kp GB_BSLH>;
         };
 
         double_hash: double_hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             label = "Double Hash";
-            bindings = <&kp HASH &kp HASH>;
+            bindings = <&kp GB_HASH &kp GB_HASH>;
         };
 
         triple_speech: triple_speech {
             compatible = "zmk,behavior-macro";
             label = "Triple Speech";
             #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp DOUBLE_QUOTES>;
+            bindings = <&kp GB_DQT &kp GB_DQT &kp GB_DQT>;
         };
 
         triple_quote: triple_quote {
@@ -322,7 +322,7 @@
             compatible = "zmk,behavior-macro";
             label = "Space Double Pipe Space";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp PIPE &kp PIPE &kp SPACE>;
+            bindings = <&kp SPACE &kp GB_PIPE &kp GB_PIPE &kp SPACE>;
         };
 
         double_equal: double_equal {
@@ -555,8 +555,8 @@
         sym_layer {
             label = "SYMBOLS";
             bindings = <
-        &kp TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp LS(NUMBER_3)            &trans                              &kp AT    &HT_Double_Pipe 0 PIPE  &kp CARET  &kp BSPC
-        &trans     &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR  &kp QMARK               &kp RPAR   &HT_Double_Hash 0 HASH
+        &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR           &kp GB_POUND_SIGN &kp AT    &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &kp BSPC
+        &trans     &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR  &kp QMARK               &kp RPAR   &HT_Double_Hash 0 GB_HASH
 &trans  &trans     &HT_Double_LT 0 LT  &HT_Double_Bang 0 EXCLAMATION  &HT_Double_GT 0 GT  &trans                      &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT  &kp AMPS                &kp RBKT   &trans                  &trans
                                        &trans                         &trans              &trans                      &trans                              &trans    &trans
             >;
@@ -565,7 +565,7 @@
         number_layer {
             label = "NUMBERS";
             bindings = <
-        &trans  &kp N7  &kp N8  &kp N9  &trans       &trans  &kp AT_SIGN  &trans  &trans  &trans
+        &trans  &kp N7  &kp N8  &kp N9  &trans       &trans  &kp GB_AT_SIGN  &trans  &trans  &trans
         &kp N0  &kp N4  &kp N5  &kp N6  &kp LS(G)    &trans  &kp J        &kp K   &trans  &trans
 &trans  &trans  &kp N1  &kp N2  &kp N3  &kp V        &trans  &trans       &trans  &trans  &trans  &trans
                         &trans  &trans  &trans       &trans  &trans       &trans
@@ -595,19 +595,19 @@
         game_layer {
             label = "GAMING";
             bindings = <
-           &mt TAB T  &kp Q  &kp W     &kp E      &kp R     &trans  &trans  &trans  &trans  &trans
-           &kp LSHFT  &kp A  &kp S     &kp D      &kp F     &trans  &trans  &trans  &trans  &trans
-&kp GRAVE  &kp LCTRL  &kp Z  &kp X     &kp C      &kp V     &trans  &trans  &trans  &trans  &trans  &trans
-                             &lt 6 N2  &kp SPACE  &kp N2    &trans  &trans  &trans
+        &mt TAB T  &kp Q  &kp W     &kp E      &kp R     &trans  &trans  &trans  &trans  &trans
+        &kp LSHFT  &kp A  &kp S     &kp D      &kp F     &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X     &kp C      &kp V     &trans  &trans  &trans  &trans  &trans  &trans
+                          &lt 6 N2  &kp SPACE  &kp N2    &trans  &trans  &trans
             >;
         };
 
         game_num_layer {
             bindings = <
-        &kp Y  &kp N1  &kp N2  &kp N3  &kp T     &trans  &trans  &trans  &trans  &trans
-        &kp H  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
-&trans  &kp N  &kp N7  &kp N8  &kp N9  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
-                       &trans  &trans  &trans    &trans  &trans  &trans
+           &kp Y  &kp N1  &kp N2  &kp N3  &kp T     &trans  &trans  &trans  &trans  &trans
+           &kp H  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
+&kp GRAVE  &kp N  &kp N7  &kp N8  &kp N9  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "GAMING NUMS";
