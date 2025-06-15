@@ -162,7 +162,7 @@
         };
 
         combo_numword {
-            bindings = <&num_word 2>;
+            bindings = <&numword_tapdance>;
             key-positions = <36 33>;
         };
 
@@ -355,6 +355,20 @@
     };
 
     behaviors {
+        numword_holdtap: numword_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&num_word 2>, <&mo 5>;
+        };
+
+        numword_tapdance: numword_tapdance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&numword_holdtap>, <&tog 2>;
+        };
+
         colon_switch: colon_switch {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -541,7 +555,7 @@
             bindings = <
               &kp Q                                      &kp W  &kp E      &kp R            &kp T        &kp Y               &kp U        &kp I                   &kp O                 &kp P
               &kp A                                      &kp S  &kp D      &kp F            &kp G        &kp H               &kp J        &kp K                   &kp L                 &colon_switch
-&lt 5 ESCAPE  &HT_underscore_hyphen KP_MINUS UNDERSCORE  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA               &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH  &key_repeat
+&lt 3 ESCAPE  &HT_underscore_hyphen KP_MINUS UNDERSCORE  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA               &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH  &key_repeat
                                                                 &kp LCTRL  &lt 1 BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt 4 SPACE  &lt 2 LEFT_PARENTHESIS
             >;
         };
