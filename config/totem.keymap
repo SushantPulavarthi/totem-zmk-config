@@ -357,16 +357,18 @@
     behaviors {
         numword_holdtap: numword_holdtap {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            label = "HT_Double_GT";
             flavor = "hold-preferred";
-            bindings = <&num_word 2>, <&mo 5>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&num_word>, <&mo>;
         };
 
         numword_tapdance: numword_tapdance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&numword_holdtap>, <&tog 2>;
+            bindings = <&numword_holdtap 2 5>, <&tog 2>;
         };
 
         colon_switch: colon_switch {
