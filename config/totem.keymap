@@ -610,9 +610,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &as Q                    &as W  &as E      &as R            &as T        &as Y               &as U        &as I      &as O                 &as P
-              &as A                    &as S  &as D      &as F            &as G        &as H               &as J        &as K      &as L                 &mt GB_SEMICOLON GB_COLON
-&lt 3 ESCAPE  &mt KP_MINUS UNDERSCORE  &as X  &as C      &as V            &as B        &as N               &as M        &as COMMA  &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repeat
+              &kp Q                    &kp W  &kp E      &kp R            &kp T        &kp Y               &kp U        &kp I      &kp O                 &kp P
+              &kp A                    &kp S  &kp D      &kp F            &kp G        &kp H               &kp J        &kp K      &kp L                 &mt GB_SEMICOLON GB_COLON
+&lt 3 ESCAPE  &mt KP_MINUS UNDERSCORE  &kp X  &kp C      &kp V            &kp B        &kp N               &kp M        &kp COMMA  &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repeat
                                               &kp LCTRL  &lt 1 BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt 4 SPACE  &kp TAB
             >;
         };
@@ -662,8 +662,8 @@
         wnav_layer {
             bindings = <
         &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
-        &as LA(N6)  &as LA(N4)  &as LA(N0)  &as LA(N2)  &trans    &trans  &as LA(N3)  &as LA(N1)  &as LA(N5)  &as LA(N7)
-&trans  &trans      &trans      &trans      &as LA(N8)  &trans    &trans  &as LA(N9)  &trans      &trans      &trans      &trans
+        &kp LA(N6)  &kp LA(N4)  &kp LA(N0)  &kp LA(N2)  &trans    &trans  &kp LA(N3)  &kp LA(N1)  &kp LA(N5)  &kp LA(N7)
+&trans  &trans      &trans      &trans      &kp LA(N8)  &trans    &trans  &kp LA(N9)  &trans      &trans      &trans      &trans
                                 &trans      &trans      &trans    &trans  &trans      &trans
             >;
 
