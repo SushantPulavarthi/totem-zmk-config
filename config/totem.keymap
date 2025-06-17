@@ -118,12 +118,12 @@
         };
 
         combo_speech {
-            bindings = <&HT_Triple_Speech 0 GB_DQT>;
+            bindings = <&HT_DOUBLE_SPEECH 0 GB_DQT>;
             key-positions = <11 13>;
         };
 
         combo_quotes {
-            bindings = <&HT_Triple_Quote 0 SQT>;
+            bindings = <&double_quote>;
             key-positions = <16 18>;
         };
 
@@ -394,6 +394,20 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
         };
+
+        double_speech: double_speech {
+            compatible = "zmk,behavior-macro";
+            label = "DOUBLE_SPEECH";
+            #binding-cells = <0>;
+            bindings = <&kp GB_DQT &kp GB_DQT>;
+        };
+
+        double_quote: double_quote {
+            compatible = "zmk,behavior-macro";
+            label = "DOUBLE_QUOTE";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT>;
+        };
     };
 
     behaviors {
@@ -590,6 +604,24 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        HT_DOUBLE_SPEECH: HT_DOUBLE_SPEECH {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_DOUBLE_SPEECH";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&double_speech>, <&kp>;
+        };
+
+        HT_DOUBLE_QUOTE: HT_DOUBLE_QUOTE {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_DOUBLE_QUOTE";
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&triple_quote>, <&kp>;
+        };
     };
 
     keymap {
@@ -624,10 +656,10 @@
         sym_layer {
             label = "SYMBOLS";
             bindings = <
-        &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp AT    &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &kp BSPC
-        &trans        &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR  &kp QMARK                  &kp RPAR   &HT_Double_Hash 0 GB_HASH
-&trans  &trans        &HT_Double_LT 0 LT  &HT_Double_Bang 0 EXCLAMATION  &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT  &kp AMPS                   &kp RBKT   &trans                     &trans
-                                          &trans                         &trans              &trans                         &trans                              &trans    &trans
+        &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN  &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &trans
+        &trans        &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR        &kp QMARK                  &kp RPAR   &HT_Double_Hash 0 GB_HASH
+&trans  &trans        &HT_Double_LT 0 LT  &HT_Double_Bang 0 EXCLAMATION  &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT        &kp AMPS                   &kp RBKT   &trans                     &trans
+                                          &trans                         &trans              &trans                         &trans                              &trans          &trans
             >;
         };
 
