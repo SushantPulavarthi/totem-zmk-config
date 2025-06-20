@@ -38,7 +38,6 @@ def parse_layer(layer):
 # };
 def combo(name, thumb_pos, key_pos, binding):
     return f"""        combo_{name} {{
-            timeout-ms = <30>;
             key-positions = <{thumb_pos} {key_pos}>;
             bindings = <{binding}>;
         }};
