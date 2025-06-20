@@ -24,6 +24,11 @@
 #define TVP1 4
 #define TVP2 5
 
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 21 22 23 24 25 26 27
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 20 28 29 30 31 32 33 34
+#define L_THUMB 36
+#define R_THUMB 39
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -37,9 +42,37 @@
     combos {
         compatible = "zmk,combos";
 
+        // Left thumb + Left-hand key → Numbers layer
+        combo_left_thumb_same {
+            timeout-ms = <30>;
+            key-positions = <L_THUMB KEYS_L>;
+            bindings = <&mo 1>;
+        };
+
+        // Left thumb + Right-hand key → Symbols layer
+        combo_left_thumb_opposite {
+            timeout-ms = <30>;
+            key-positions = <L_THUMB KEYS_R>;
+            bindings = <&mo 2>;
+        };
+
+        // Right thumb + Right-hand key → Symbols layer
+        combo_right_thumb_same {
+            timeout-ms = <30>;
+            key-positions = <R_THUMB KEYS_R>;
+            bindings = <&mo 1>;
+        };
+
+        // Right thumb + Left-hand key → Numbers layer
+        combo_right_thumb_opposite {
+            timeout-ms = <30>;
+            key-positions = <R_THUMB KEYS_L>;
+            bindings = <&mo 2>;
+        };
+
         combo_ctrl_del {
             bindings = <&kp LC(DELETE)>;
-            key-positions = <2 1 3>;
+            key-positions = <1 2 3>;
         };
 
         combo_ctrl_w {
