@@ -39,34 +39,6 @@
     combos {
         compatible = "zmk,combos";
 
-        // Left thumb + Left-hand key → Numbers layer
-        combo_left_thumb_same {
-            timeout-ms = <30>;
-            key-positions = <L_THUMB KEYS_L>;
-            bindings = <&mo 1>;
-        };
-
-        // Left thumb + Right-hand key → Symbols layer
-        combo_left_thumb_opposite {
-            timeout-ms = <30>;
-            key-positions = <L_THUMB KEYS_R>;
-            bindings = <&mo 2>;
-        };
-
-        // Right thumb + Right-hand key → Symbols layer
-        combo_right_thumb_same {
-            timeout-ms = <30>;
-            key-positions = <R_THUMB KEYS_R>;
-            bindings = <&mo 1>;
-        };
-
-        // Right thumb + Left-hand key → Numbers layer
-        combo_right_thumb_opposite {
-            timeout-ms = <30>;
-            key-positions = <R_THUMB KEYS_L>;
-            bindings = <&mo 2>;
-        };
-
         combo_ctrl_del {
             bindings = <&kp LC(DELETE)>;
             key-positions = <1 2 3>;
