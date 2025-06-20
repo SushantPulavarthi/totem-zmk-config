@@ -49,7 +49,7 @@
 
         // #include "key_combos.dtsi"
         // START THUMB KEY COMBOS
-        combo_l_sym_0 {
+            combo_l_sym_0 {
             key-positions = <33 0>;
             bindings = <&kp GB_TILDE>;
         };
@@ -112,42 +112,42 @@
 
 
         combo_l_num_1 {
-            key-positions = <33 1>;
+            key-positions = <36 1>;
             bindings = <&kp PLUS>;
         };
 
         combo_l_num_2 {
-            key-positions = <33 2>;
+            key-positions = <36 2>;
             bindings = <&kp MINUS>;
         };
 
         combo_l_num_3 {
-            key-positions = <33 3>;
+            key-positions = <36 3>;
             bindings = <&kp PERCENT>;
         };
 
         combo_l_num_10 {
-            key-positions = <33 10>;
+            key-positions = <36 10>;
             bindings = <&kp N6>;
         };
 
         combo_l_num_11 {
-            key-positions = <33 11>;
+            key-positions = <36 11>;
             bindings = <&kp N4>;
         };
 
         combo_l_num_12 {
-            key-positions = <33 12>;
+            key-positions = <36 12>;
             bindings = <&kp N0>;
         };
 
         combo_l_num_13 {
-            key-positions = <33 13>;
+            key-positions = <36 13>;
             bindings = <&kp N2>;
         };
 
         combo_l_num_24 {
-            key-positions = <33 24>;
+            key-positions = <36 24>;
             bindings = <&kp N8>;
         };
 
@@ -221,45 +221,44 @@
 
 
         combo_r_num_6 {
-            key-positions = <36 6>;
+            key-positions = <33 6>;
             bindings = <&kp AT>;
         };
 
         combo_r_num_16 {
-            key-positions = <36 16>;
+            key-positions = <33 16>;
             bindings = <&kp N3>;
         };
 
         combo_r_num_17 {
-            key-positions = <36 17>;
+            key-positions = <33 17>;
             bindings = <&kp N1>;
         };
 
         combo_r_num_18 {
-            key-positions = <36 18>;
+            key-positions = <33 18>;
             bindings = <&kp N5>;
         };
 
         combo_r_num_19 {
-            key-positions = <36 19>;
+            key-positions = <33 19>;
             bindings = <&kp N7>;
         };
 
         combo_r_num_27 {
-            key-positions = <36 27>;
+            key-positions = <33 27>;
             bindings = <&kp N9>;
         };
 
         combo_r_num_28 {
-            key-positions = <36 28>;
+            key-positions = <33 28>;
             bindings = <&kp J>;
         };
 
         combo_r_num_29 {
-            key-positions = <36 29>;
+            key-positions = <33 29>;
             bindings = <&kp K>;
         };
-
         // END THUMB KEY COMBOS
 
         combo_ctrl_del {

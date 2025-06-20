@@ -68,7 +68,7 @@ for lkey in l_keys:
     if lkey in num_bindings:
         output.append(
             # f"THUMB_COMBO(r_num_{lkey}, R_THUMB, {lkey}, {num_bindings[lkey]})"
-            combo(f"l_num_{lkey}", 33, lkey, num_bindings[lkey])
+            combo(f"l_num_{lkey}", 36, lkey, num_bindings[lkey])
         )
 output.append("\n")
 
@@ -84,7 +84,7 @@ for rkey in r_keys:
     if rkey in num_bindings:
         output.append(
             # f"THUMB_COMBO(l_num_{rkey}, L_THUMB, {rkey}, {num_bindings[rkey]})"
-            combo(f"r_num_{rkey}", 36, rkey, num_bindings[rkey])
+            combo(f"r_num_{rkey}", 33, rkey, num_bindings[rkey])
         )
 
 with open("key_combos.dtsi", "w") as f:
