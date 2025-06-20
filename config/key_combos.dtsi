@@ -1,41 +1,251 @@
-THUMB_COMBO(l_sym_0, L_THUMB, 0, &kp GB_TILDE)
-THUMB_COMBO(l_sym_1, L_THUMB, 1, &kp PLUS)
-THUMB_COMBO(r_num_1, R_THUMB, 1, &kp PLUS)
-THUMB_COMBO(l_sym_2, L_THUMB, 2, &kp MINUS)
-THUMB_COMBO(r_num_2, R_THUMB, 2, &kp MINUS)
-THUMB_COMBO(l_sym_3, L_THUMB, 3, &kp PERCENT)
-THUMB_COMBO(r_num_3, R_THUMB, 3, &kp PERCENT)
-THUMB_COMBO(l_sym_4, L_THUMB, 4, &kp GB_DOLLAR)
-THUMB_COMBO(r_num_10, R_THUMB, 10, &kp N6)
-THUMB_COMBO(l_sym_11, L_THUMB, 11, &kp LBRC)
-THUMB_COMBO(r_num_11, R_THUMB, 11, &kp N4)
-THUMB_COMBO(l_sym_12, L_THUMB, 12, &kp STAR)
-THUMB_COMBO(r_num_12, R_THUMB, 12, &kp N0)
-THUMB_COMBO(l_sym_13, L_THUMB, 13, &kp RBRC)
-THUMB_COMBO(r_num_13, R_THUMB, 13, &kp N2)
-THUMB_COMBO(l_sym_14, L_THUMB, 14, &HT_Double_Bslash 0 GB_BSLH)
-THUMB_COMBO(l_sym_22, L_THUMB, 22, &HT_Double_LT 0 LT)
-THUMB_COMBO(l_sym_23, L_THUMB, 23, &HT_Double_Bang 0 EXCLAMATION)
-THUMB_COMBO(l_sym_24, L_THUMB, 24, &HT_Double_GT 0 GT)
-THUMB_COMBO(r_num_24, R_THUMB, 24, &kp N8)
-THUMB_COMBO(r_sym_5, R_THUMB, 5, &kp GB_POUND_SIGN)
-THUMB_COMBO(r_sym_6, R_THUMB, 6, &kp GB_AT_SIGN)
-THUMB_COMBO(l_num_6, L_THUMB, 6, &kp AT)
-THUMB_COMBO(r_sym_7, R_THUMB, 7, &HT_Double_Pipe 0 GB_PIPE)
-THUMB_COMBO(r_sym_8, R_THUMB, 8, &kp CARET)
-THUMB_COMBO(r_sym_15, R_THUMB, 15, &HT_Triple_Apostrophe 0 GRAVE)
-THUMB_COMBO(r_sym_16, R_THUMB, 16, &kp LPAR)
-THUMB_COMBO(l_num_16, L_THUMB, 16, &kp N3)
-THUMB_COMBO(r_sym_17, R_THUMB, 17, &kp QMARK)
-THUMB_COMBO(l_num_17, L_THUMB, 17, &kp N1)
-THUMB_COMBO(r_sym_18, R_THUMB, 18, &kp RPAR)
-THUMB_COMBO(l_num_18, L_THUMB, 18, &kp N5)
-THUMB_COMBO(r_sym_19, R_THUMB, 19, &HT_Double_Hash 0 GB_HASH)
-THUMB_COMBO(l_num_19, L_THUMB, 19, &kp N7)
-THUMB_COMBO(r_sym_26, R_THUMB, 26, &HT_Double_Underscore 0 UNDERSCORE)
-THUMB_COMBO(r_sym_27, R_THUMB, 27, &kp LBKT)
-THUMB_COMBO(l_num_27, L_THUMB, 27, &kp N9)
-THUMB_COMBO(r_sym_28, R_THUMB, 28, &kp AMPS)
-THUMB_COMBO(l_num_28, L_THUMB, 28, &kp J)
-THUMB_COMBO(r_sym_29, R_THUMB, 29, &kp RBKT)
-THUMB_COMBO(l_num_29, L_THUMB, 29, &kp K)
+        combo_l_sym_0 {
+            timeout-ms = <30>;
+            key-positions = <33 0>;
+            bindings = <&kp GB_TILDE>;
+        };
+
+        combo_l_sym_1 {
+            timeout-ms = <30>;
+            key-positions = <33 1>;
+            bindings = <&kp PLUS>;
+        };
+
+        combo_l_sym_2 {
+            timeout-ms = <30>;
+            key-positions = <33 2>;
+            bindings = <&kp MINUS>;
+        };
+
+        combo_l_sym_3 {
+            timeout-ms = <30>;
+            key-positions = <33 3>;
+            bindings = <&kp PERCENT>;
+        };
+
+        combo_l_sym_4 {
+            timeout-ms = <30>;
+            key-positions = <33 4>;
+            bindings = <&kp GB_DOLLAR>;
+        };
+
+        combo_l_sym_11 {
+            timeout-ms = <30>;
+            key-positions = <33 11>;
+            bindings = <&kp LBRC>;
+        };
+
+        combo_l_sym_12 {
+            timeout-ms = <30>;
+            key-positions = <33 12>;
+            bindings = <&kp STAR>;
+        };
+
+        combo_l_sym_13 {
+            timeout-ms = <30>;
+            key-positions = <33 13>;
+            bindings = <&kp RBRC>;
+        };
+
+        combo_l_sym_14 {
+            timeout-ms = <30>;
+            key-positions = <33 14>;
+            bindings = <&HT_Double_Bslash 0 GB_BSLH>;
+        };
+
+        combo_l_sym_22 {
+            timeout-ms = <30>;
+            key-positions = <33 22>;
+            bindings = <&HT_Double_LT 0 LT>;
+        };
+
+        combo_l_sym_23 {
+            timeout-ms = <30>;
+            key-positions = <33 23>;
+            bindings = <&HT_Double_Bang 0 EXCLAMATION>;
+        };
+
+        combo_l_sym_24 {
+            timeout-ms = <30>;
+            key-positions = <33 24>;
+            bindings = <&HT_Double_GT 0 GT>;
+        };
+
+
+
+        combo_l_num_1 {
+            timeout-ms = <30>;
+            key-positions = <33 1>;
+            bindings = <&kp PLUS>;
+        };
+
+        combo_l_num_2 {
+            timeout-ms = <30>;
+            key-positions = <33 2>;
+            bindings = <&kp MINUS>;
+        };
+
+        combo_l_num_3 {
+            timeout-ms = <30>;
+            key-positions = <33 3>;
+            bindings = <&kp PERCENT>;
+        };
+
+        combo_l_num_10 {
+            timeout-ms = <30>;
+            key-positions = <33 10>;
+            bindings = <&kp N6>;
+        };
+
+        combo_l_num_11 {
+            timeout-ms = <30>;
+            key-positions = <33 11>;
+            bindings = <&kp N4>;
+        };
+
+        combo_l_num_12 {
+            timeout-ms = <30>;
+            key-positions = <33 12>;
+            bindings = <&kp N0>;
+        };
+
+        combo_l_num_13 {
+            timeout-ms = <30>;
+            key-positions = <33 13>;
+            bindings = <&kp N2>;
+        };
+
+        combo_l_num_24 {
+            timeout-ms = <30>;
+            key-positions = <33 24>;
+            bindings = <&kp N8>;
+        };
+
+
+
+        combo_r_sym_5 {
+            timeout-ms = <30>;
+            key-positions = <36 5>;
+            bindings = <&kp GB_POUND_SIGN>;
+        };
+
+        combo_r_sym_6 {
+            timeout-ms = <30>;
+            key-positions = <36 6>;
+            bindings = <&kp GB_AT_SIGN>;
+        };
+
+        combo_r_sym_7 {
+            timeout-ms = <30>;
+            key-positions = <36 7>;
+            bindings = <&HT_Double_Pipe 0 GB_PIPE>;
+        };
+
+        combo_r_sym_8 {
+            timeout-ms = <30>;
+            key-positions = <36 8>;
+            bindings = <&kp CARET>;
+        };
+
+        combo_r_sym_15 {
+            timeout-ms = <30>;
+            key-positions = <36 15>;
+            bindings = <&HT_Triple_Apostrophe 0 GRAVE>;
+        };
+
+        combo_r_sym_16 {
+            timeout-ms = <30>;
+            key-positions = <36 16>;
+            bindings = <&kp LPAR>;
+        };
+
+        combo_r_sym_17 {
+            timeout-ms = <30>;
+            key-positions = <36 17>;
+            bindings = <&kp QMARK>;
+        };
+
+        combo_r_sym_18 {
+            timeout-ms = <30>;
+            key-positions = <36 18>;
+            bindings = <&kp RPAR>;
+        };
+
+        combo_r_sym_19 {
+            timeout-ms = <30>;
+            key-positions = <36 19>;
+            bindings = <&HT_Double_Hash 0 GB_HASH>;
+        };
+
+        combo_r_sym_26 {
+            timeout-ms = <30>;
+            key-positions = <36 26>;
+            bindings = <&HT_Double_Underscore 0 UNDERSCORE>;
+        };
+
+        combo_r_sym_27 {
+            timeout-ms = <30>;
+            key-positions = <36 27>;
+            bindings = <&kp LBKT>;
+        };
+
+        combo_r_sym_28 {
+            timeout-ms = <30>;
+            key-positions = <36 28>;
+            bindings = <&kp AMPS>;
+        };
+
+        combo_r_sym_29 {
+            timeout-ms = <30>;
+            key-positions = <36 29>;
+            bindings = <&kp RBKT>;
+        };
+
+
+
+        combo_r_num_6 {
+            timeout-ms = <30>;
+            key-positions = <36 6>;
+            bindings = <&kp AT>;
+        };
+
+        combo_r_num_16 {
+            timeout-ms = <30>;
+            key-positions = <36 16>;
+            bindings = <&kp N3>;
+        };
+
+        combo_r_num_17 {
+            timeout-ms = <30>;
+            key-positions = <36 17>;
+            bindings = <&kp N1>;
+        };
+
+        combo_r_num_18 {
+            timeout-ms = <30>;
+            key-positions = <36 18>;
+            bindings = <&kp N5>;
+        };
+
+        combo_r_num_19 {
+            timeout-ms = <30>;
+            key-positions = <36 19>;
+            bindings = <&kp N7>;
+        };
+
+        combo_r_num_27 {
+            timeout-ms = <30>;
+            key-positions = <36 27>;
+            bindings = <&kp N9>;
+        };
+
+        combo_r_num_28 {
+            timeout-ms = <30>;
+            key-positions = <36 28>;
+            bindings = <&kp J>;
+        };
+
+        combo_r_num_29 {
+            timeout-ms = <30>;
+            key-positions = <36 29>;
+            bindings = <&kp K>;
+        };

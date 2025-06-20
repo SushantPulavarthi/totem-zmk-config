@@ -30,6 +30,21 @@ def parse_layer(layer):
     return bindings
 
 
+# #define THUMB_COMBO(NAME, THUMB_POS, KEY_POS, BINDING) \
+# combo_##NAME : NAME { \
+#     timeout-ms = <30>; \
+#     key-positions = <THUMB_POS KEY_POS>; \
+#     bindings = <BINDING>; \
+# };
+def combo(name, thumb_pos, key_pos, binding):
+    return f"""        combo_{name} {{
+            timeout-ms = <30>;
+            key-positions = <{thumb_pos} {key_pos}>;
+            bindings = <{binding}>;
+        }};
+"""
+
+
 sym_bindings = parse_layer(sym_layer)
 num_bindings = parse_layer(num_layer)
 
@@ -45,21 +60,32 @@ output = []
 for lkey in l_keys:
     if lkey in sym_bindings:
         output.append(
-            f"THUMB_COMBO(l_sym_{lkey}, L_THUMB, {lkey}, {sym_bindings[lkey]})"
+            # f"THUMB_COMBO(l_sym_{lkey}, L_THUMB, {lkey}, {sym_bindings[lkey]})"
+            combo(f"l_sym_{lkey}", 33, lkey, sym_bindings[lkey])
         )
+output.append("\n")
+
+for lkey in l_keys:
     if lkey in num_bindings:
         output.append(
-            f"THUMB_COMBO(r_num_{lkey}, R_THUMB, {lkey}, {num_bindings[lkey]})"
+            # f"THUMB_COMBO(r_num_{lkey}, R_THUMB, {lkey}, {num_bindings[lkey]})"
+            combo(f"l_num_{lkey}", 33, lkey, num_bindings[lkey])
         )
+output.append("\n")
 
 for rkey in r_keys:
     if rkey in sym_bindings:
         output.append(
-            f"THUMB_COMBO(r_sym_{rkey}, R_THUMB, {rkey}, {sym_bindings[rkey]})"
+            # f"THUMB_COMBO(r_sym_{rkey}, R_THUMB, {rkey}, {sym_bindings[rkey]})"
+            combo(f"r_sym_{rkey}", 36, rkey, sym_bindings[rkey])
         )
+
+output.append("\n")
+for rkey in r_keys:
     if rkey in num_bindings:
         output.append(
-            f"THUMB_COMBO(l_num_{rkey}, L_THUMB, {rkey}, {num_bindings[rkey]})"
+            # f"THUMB_COMBO(l_num_{rkey}, L_THUMB, {rkey}, {num_bindings[rkey]})"
+            combo(f"r_num_{rkey}", 36, rkey, num_bindings[rkey])
         )
 
 with open("key_combos.dtsi", "w") as f:

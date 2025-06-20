@@ -34,12 +34,12 @@
 
 #define L_THUMB 33
 #define R_THUMB 36
-#define THUMB_COMBO(NAME, THUMB_POS, KEY_POS, BINDING) \
-    combo_##NAME { \
-        timeout-ms = <30>; \
-        key-positions = <THUMB_POS KEY_POS>; \
-        bindings = <BINDING>; \
-    };
+// #define THUMB_COMBO(NAME, THUMB_POS, KEY_POS, BINDING) \
+// combo_##NAME : NAME { \
+//     timeout-ms = <30>; \
+//     key-positions = <THUMB_POS KEY_POS>; \
+//     bindings = <BINDING>; \
+// };
 
 &num_word { continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL J K AT_SIGN V G LS(G)>; };
 
@@ -47,7 +47,261 @@
     combos {
         compatible = "zmk,combos";
 
-        #include "key_combos.dtsi"
+        // #include "key_combos.dtsi"
+        // START THUMB KEY COMBOS
+        combo_l_sym_0 {
+            timeout-ms = <30>;
+            key-positions = <33 0>;
+            bindings = <&kp GB_TILDE>;
+        };
+
+        combo_l_sym_1 {
+            timeout-ms = <30>;
+            key-positions = <33 1>;
+            bindings = <&kp PLUS>;
+        };
+
+        combo_l_sym_2 {
+            timeout-ms = <30>;
+            key-positions = <33 2>;
+            bindings = <&kp MINUS>;
+        };
+
+        combo_l_sym_3 {
+            timeout-ms = <30>;
+            key-positions = <33 3>;
+            bindings = <&kp PERCENT>;
+        };
+
+        combo_l_sym_4 {
+            timeout-ms = <30>;
+            key-positions = <33 4>;
+            bindings = <&kp GB_DOLLAR>;
+        };
+
+        combo_l_sym_11 {
+            timeout-ms = <30>;
+            key-positions = <33 11>;
+            bindings = <&kp LBRC>;
+        };
+
+        combo_l_sym_12 {
+            timeout-ms = <30>;
+            key-positions = <33 12>;
+            bindings = <&kp STAR>;
+        };
+
+        combo_l_sym_13 {
+            timeout-ms = <30>;
+            key-positions = <33 13>;
+            bindings = <&kp RBRC>;
+        };
+
+        combo_l_sym_14 {
+            timeout-ms = <30>;
+            key-positions = <33 14>;
+            bindings = <&HT_Double_Bslash 0 GB_BSLH>;
+        };
+
+        combo_l_sym_22 {
+            timeout-ms = <30>;
+            key-positions = <33 22>;
+            bindings = <&HT_Double_LT 0 LT>;
+        };
+
+        combo_l_sym_23 {
+            timeout-ms = <30>;
+            key-positions = <33 23>;
+            bindings = <&HT_Double_Bang 0 EXCLAMATION>;
+        };
+
+        combo_l_sym_24 {
+            timeout-ms = <30>;
+            key-positions = <33 24>;
+            bindings = <&HT_Double_GT 0 GT>;
+        };
+
+
+
+        combo_l_num_1 {
+            timeout-ms = <30>;
+            key-positions = <33 1>;
+            bindings = <&kp PLUS>;
+        };
+
+        combo_l_num_2 {
+            timeout-ms = <30>;
+            key-positions = <33 2>;
+            bindings = <&kp MINUS>;
+        };
+
+        combo_l_num_3 {
+            timeout-ms = <30>;
+            key-positions = <33 3>;
+            bindings = <&kp PERCENT>;
+        };
+
+        combo_l_num_10 {
+            timeout-ms = <30>;
+            key-positions = <33 10>;
+            bindings = <&kp N6>;
+        };
+
+        combo_l_num_11 {
+            timeout-ms = <30>;
+            key-positions = <33 11>;
+            bindings = <&kp N4>;
+        };
+
+        combo_l_num_12 {
+            timeout-ms = <30>;
+            key-positions = <33 12>;
+            bindings = <&kp N0>;
+        };
+
+        combo_l_num_13 {
+            timeout-ms = <30>;
+            key-positions = <33 13>;
+            bindings = <&kp N2>;
+        };
+
+        combo_l_num_24 {
+            timeout-ms = <30>;
+            key-positions = <33 24>;
+            bindings = <&kp N8>;
+        };
+
+
+
+        combo_r_sym_5 {
+            timeout-ms = <30>;
+            key-positions = <36 5>;
+            bindings = <&kp GB_POUND_SIGN>;
+        };
+
+        combo_r_sym_6 {
+            timeout-ms = <30>;
+            key-positions = <36 6>;
+            bindings = <&kp GB_AT_SIGN>;
+        };
+
+        combo_r_sym_7 {
+            timeout-ms = <30>;
+            key-positions = <36 7>;
+            bindings = <&HT_Double_Pipe 0 GB_PIPE>;
+        };
+
+        combo_r_sym_8 {
+            timeout-ms = <30>;
+            key-positions = <36 8>;
+            bindings = <&kp CARET>;
+        };
+
+        combo_r_sym_15 {
+            timeout-ms = <30>;
+            key-positions = <36 15>;
+            bindings = <&HT_Triple_Apostrophe 0 GRAVE>;
+        };
+
+        combo_r_sym_16 {
+            timeout-ms = <30>;
+            key-positions = <36 16>;
+            bindings = <&kp LPAR>;
+        };
+
+        combo_r_sym_17 {
+            timeout-ms = <30>;
+            key-positions = <36 17>;
+            bindings = <&kp QMARK>;
+        };
+
+        combo_r_sym_18 {
+            timeout-ms = <30>;
+            key-positions = <36 18>;
+            bindings = <&kp RPAR>;
+        };
+
+        combo_r_sym_19 {
+            timeout-ms = <30>;
+            key-positions = <36 19>;
+            bindings = <&HT_Double_Hash 0 GB_HASH>;
+        };
+
+        combo_r_sym_26 {
+            timeout-ms = <30>;
+            key-positions = <36 26>;
+            bindings = <&HT_Double_Underscore 0 UNDERSCORE>;
+        };
+
+        combo_r_sym_27 {
+            timeout-ms = <30>;
+            key-positions = <36 27>;
+            bindings = <&kp LBKT>;
+        };
+
+        combo_r_sym_28 {
+            timeout-ms = <30>;
+            key-positions = <36 28>;
+            bindings = <&kp AMPS>;
+        };
+
+        combo_r_sym_29 {
+            timeout-ms = <30>;
+            key-positions = <36 29>;
+            bindings = <&kp RBKT>;
+        };
+
+
+
+        combo_r_num_6 {
+            timeout-ms = <30>;
+            key-positions = <36 6>;
+            bindings = <&kp AT>;
+        };
+
+        combo_r_num_16 {
+            timeout-ms = <30>;
+            key-positions = <36 16>;
+            bindings = <&kp N3>;
+        };
+
+        combo_r_num_17 {
+            timeout-ms = <30>;
+            key-positions = <36 17>;
+            bindings = <&kp N1>;
+        };
+
+        combo_r_num_18 {
+            timeout-ms = <30>;
+            key-positions = <36 18>;
+            bindings = <&kp N5>;
+        };
+
+        combo_r_num_19 {
+            timeout-ms = <30>;
+            key-positions = <36 19>;
+            bindings = <&kp N7>;
+        };
+
+        combo_r_num_27 {
+            timeout-ms = <30>;
+            key-positions = <36 27>;
+            bindings = <&kp N9>;
+        };
+
+        combo_r_num_28 {
+            timeout-ms = <30>;
+            key-positions = <36 28>;
+            bindings = <&kp J>;
+        };
+
+        combo_r_num_29 {
+            timeout-ms = <30>;
+            key-positions = <36 29>;
+            bindings = <&kp K>;
+        };
+
+        // END THUMB KEY COMBOS
 
         combo_ctrl_del {
             bindings = <&kp LC(DELETE)>;
@@ -200,166 +454,142 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp ESCAPE &kp GB_COLON &kp W &kp ENTER>;
-            label = "WRITE";
         };
 
         quit: quit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(W) &kp Q &kp ENTER>;
-            label = "QUIT";
         };
 
         from: from {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp LT &kp MINUS &kp SPACE>;
-            label = "FROM";
         };
 
         combo_to: to {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp SPACE &kp MINUS &kp GT &kp SPACE>;
-            label = "TO";
         };
 
         geq1: geq1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp SPACE &kp GT &kp EQUAL &kp SPACE>;
-            label = "GEQ1";
         };
 
         geq2: geq2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp SPACE &kp EQUAL &kp GT &kp SPACE>;
-            label = "GEQ2";
         };
 
         leq: leq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp SPACE &kp LT &kp EQUAL &kp SPACE>;
-            label = "LEQ";
         };
 
         hsplit: hsplit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(W) &kp S>;
-            label = "HSPLIT";
         };
 
         vsplit: vsplit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(W) &kp V>;
-            label = "VSPLIT";
         };
 
         double_underscore: double_underscore {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            label = "Double Underscore";
             bindings = <&kp UNDER &kp UNDER>;
         };
 
         double_lt: double_lt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            label = "Double Less Than";
             bindings = <&kp LT &kp LT>;
         };
 
         double_gt: double_gt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            label = "Double Greater Than";
             bindings = <&kp GT &kp GT>;
         };
 
         double_slash: double_slash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            label = "Double Slash";
             bindings = <&kp SLASH &kp SLASH>;
         };
 
         double_bslash: double_bslash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            label = "Double Backslash";
             bindings = <&kp GB_BSLH &kp GB_BSLH>;
         };
 
         double_hash: double_hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            label = "Double Hash";
             bindings = <&kp GB_HASH &kp GB_HASH>;
         };
 
         triple_speech: triple_speech {
             compatible = "zmk,behavior-macro";
-            label = "Triple Speech";
             #binding-cells = <0>;
             bindings = <&kp GB_DQT &kp GB_DQT &kp GB_DQT>;
         };
 
         triple_quote: triple_quote {
             compatible = "zmk,behavior-macro";
-            label = "Triple Quote";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp SQT &kp SQT>;
         };
 
         triple_eq: triple_eq {
             compatible = "zmk,behavior-macro";
-            label = "Triple Equals";
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp EQUAL &kp EQUAL>;
         };
 
         triple_zero: triple_zero {
             compatible = "zmk,behavior-macro";
-            label = "Triple Zero";
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0 &kp N0>;
         };
 
         triple_dot: triple_dot {
             compatible = "zmk,behavior-macro";
-            label = "Triple Dot";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp DOT &kp PERIOD>;
         };
 
         double_pipe: double_pipe {
             compatible = "zmk,behavior-macro";
-            label = "Space Double Pipe Space";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp GB_PIPE &kp GB_PIPE &kp SPACE>;
         };
 
         double_equal: double_equal {
             compatible = "zmk,behavior-macro";
-            label = "Space Double Equal Space";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp EQUAL &kp EQUAL &kp SPACE>;
         };
 
         double_amp: double_amp {
             compatible = "zmk,behavior-macro";
-            label = "Space Double Ampersand Space";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp AMPS &kp AMPS &kp SPACE>;
         };
 
         double_bang: double_bang {
             compatible = "zmk,behavior-macro";
-            label = "Space Bang Equal Space";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp EXCL &kp EQUAL &kp SPACE>;
         };
@@ -368,13 +598,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
-            label = "TRIPLE_APOSTROPHE";
         };
 
         as: autoshift {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            label = "AUTOSHIFT_KP";
             bindings =
                 <&macro_press>,
                 <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
@@ -391,7 +619,6 @@
 
         shifted: macro_shifted_kp {
             #binding-cells = <1>;
-            label = "MACRO_SHIFTED_KP";
             compatible = "zmk,behavior-macro-one-param";
             bindings =
                 <&macro_press>,
@@ -404,14 +631,12 @@
 
         double_speech: double_speech {
             compatible = "zmk,behavior-macro";
-            label = "DOUBLE_SPEECH";
             #binding-cells = <0>;
             bindings = <&kp GB_DQT &kp GB_DQT>;
         };
 
         double_quote: double_quote {
             compatible = "zmk,behavior-macro";
-            label = "DOUBLE_QUOTE";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp SQT>;
         };
@@ -420,7 +645,6 @@
     behaviors {
         numword_holdtap: numword_holdtap {
             compatible = "zmk,behavior-hold-tap";
-            label = "numword_holdtap";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -443,7 +667,6 @@
 
         HT_Double_Underscore: hold_tap_double_underscore {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_Underscore";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -452,7 +675,6 @@
 
         HT_Double_LT: ht_double_LT {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_LT";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -461,7 +683,6 @@
 
         HT_Double_GT: ht_double_GT {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_GT";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -470,7 +691,6 @@
 
         HT_Double_Slash: ht_double_slash {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_Slash";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -479,7 +699,6 @@
 
         HT_Double_Bslash: ht_double_bslash {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_Backslash";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -488,7 +707,6 @@
 
         HT_Double_Hash: ht_double_hash {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_Hash";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -497,7 +715,6 @@
 
         HT_Triple_Speech: ht_triple_speech {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Triple_Speech";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -506,7 +723,6 @@
 
         HT_Triple_Quote: ht_triple_quote {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Triple_Quote";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -515,7 +731,6 @@
 
         HT_Triple_Eq: ht_triple_eq {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Triple_Equals";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -524,7 +739,6 @@
 
         HT_Triple_Zero: ht_triple_zero {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Triple_Zero";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -533,7 +747,6 @@
 
         HT_Triple_Dot: ht_triple_dot {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Triple_Dot";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -542,7 +755,6 @@
 
         HT_Double_Pipe: ht_double_pipe {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_Pipe";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -551,7 +763,6 @@
 
         HT_Double_Equal: ht_double_equal {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_Equal";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -560,7 +771,6 @@
 
         HT_Double_Amps: ht_double_amps {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_Amps";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -569,7 +779,6 @@
 
         HT_Double_Bang: ht_double_bang {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Double_Bang";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -578,7 +787,6 @@
 
         HT_Triple_Apostrophe: ht_triple_apostrophe {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Triple_Apostrophe";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -587,7 +795,6 @@
 
         HT_underscore_hyphen: HT_underscore_hyphen {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_UNDERSCORE_HYPHEN";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -596,7 +803,6 @@
 
         as_ht: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "AUTOSHIFT_HOLD_TAP";
             bindings = <&shifted>, <&kp>;
 
             #binding-cells = <2>;
@@ -605,7 +811,6 @@
 
         colon_switch_2: colon_switch_2 {
             compatible = "zmk,behavior-hold-tap";
-            label = "COLON_SWITCH_2";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -614,7 +819,6 @@
 
         HT_DOUBLE_SPEECH: HT_DOUBLE_SPEECH {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_DOUBLE_SPEECH";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -623,7 +827,6 @@
 
         HT_DOUBLE_QUOTE: HT_DOUBLE_QUOTE {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_DOUBLE_QUOTE";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -639,7 +842,7 @@
         base_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "BASE";
+            display-name = "BASE";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -661,7 +864,7 @@
         };
 
         sym_layer {
-            label = "SYMBOLS";
+            display-name = "SYMBOLS";
             bindings = <
         &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN  &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &trans
         &trans        &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR        &kp QMARK                  &kp RPAR   &HT_Double_Hash 0 GB_HASH
@@ -678,7 +881,7 @@
                           &trans     &trans       &trans    &trans  &trans  &trans
             >;
 
-            label = "NUMBERS";
+            display-name = "NUMBERS";
         };
 
         fun_layer {
@@ -689,11 +892,11 @@
                         &trans   &trans  &trans     &trans   &trans  &trans
             >;
 
-            label = "FUNCTIONS";
+            display-name = "FUNCTIONS";
         };
 
         nav_layer {
-            label = "NAV";
+            display-name = "NAV";
             bindings = <
         &trans           &kp PG_UP       &mmv MOVE_UP     &kp PG_DN          &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
         &kp PRINTSCREEN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
@@ -710,11 +913,11 @@
                                 &trans      &trans      &trans    &trans  &trans      &trans
             >;
 
-            label = "WNAV";
+            display-name = "WNAV";
         };
 
         game_layer {
-            label = "GAMING";
+            display-name = "GAMING";
             bindings = <
         &mt TAB T  &kp Q  &kp W     &kp E      &kp R     &trans  &trans  &trans  &trans  &trans
         &kp LSHFT  &kp A  &kp S     &kp D      &kp F     &trans  &trans  &trans  &trans  &trans
@@ -731,11 +934,11 @@
                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
-            label = "GAMING NUMS";
+            display-name = "GAMING NUMS";
         };
 
         number_layer_2 {
-            label = "NUMBERS_2";
+            display-name = "NUMBERS_2";
             bindings = <
         &trans  &kp N7  &kp N8  &kp N9  &trans       &trans  &kp GB_AT_SIGN  &trans  &trans  &trans
         &kp N0  &kp N4  &kp N5  &kp N6  &kp LS(G)    &trans  &kp J           &kp K   &trans  &trans
@@ -745,7 +948,7 @@
         };
 
         fun_layer_2 {
-            label = "FUNCTIONS_2";
+            display-name = "FUNCTIONS_2";
             bindings = <
         &trans  &kp F7  &kp F8  &kp F9  &kp F12    &trans  &trans  &trans  &trans  &trans
         &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans
