@@ -17,7 +17,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #include "keys_en_gb.h"
-#include "key_combos.dtsi"
 
 #define BASE 0
 #define NAV  1
@@ -33,11 +32,22 @@
     tapping-term-ms = <170>;
 };
 
+#define L_THUMB 33
+#define R_THUMB 36
+#define THUMB_COMBO(NAME, THUMB_POS, KEY_POS, BINDING) \
+    combo_##NAME { \
+        timeout-ms = <30>; \
+        key-positions = <THUMB_POS KEY_POS>; \
+        bindings = <BINDING>; \
+    };
+
 &num_word { continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL J K AT_SIGN V G LS(G)>; };
 
 / {
     combos {
         compatible = "zmk,combos";
+
+        #include "key_combos.dtsi"
 
         combo_ctrl_del {
             bindings = <&kp LC(DELETE)>;
