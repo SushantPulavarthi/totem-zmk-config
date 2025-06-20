@@ -1,0 +1,52 @@
+# This file is auto-generated. Do not edit manually.
+
+#define L_THUMB 33
+#define R_THUMB 36
+#define THUMB_COMBO(NAME, THUMB_POS, KEY_POS, BINDING) \
+combo_##NAME { \
+    timeout-ms = <30>; \
+    key-positions = <THUMB_POS KEY_POS>; \
+    bindings = <BINDING>; \
+}
+
+THUMB_COMBO(l_sym_0, L_THUMB, 0, &kp GB_TILDE)
+THUMB_COMBO(l_sym_1, L_THUMB, 1, &kp PLUS)
+THUMB_COMBO(l_num_1, L_THUMB, 1, &kp PLUS)
+THUMB_COMBO(l_sym_2, L_THUMB, 2, &kp MINUS)
+THUMB_COMBO(l_num_2, L_THUMB, 2, &kp MINUS)
+THUMB_COMBO(l_sym_3, L_THUMB, 3, &kp PERCENT)
+THUMB_COMBO(l_num_3, L_THUMB, 3, &kp PERCENT)
+THUMB_COMBO(l_sym_4, L_THUMB, 4, &kp GB_DOLLAR)
+THUMB_COMBO(l_num_10, L_THUMB, 10, &kp N6)
+THUMB_COMBO(l_sym_11, L_THUMB, 11, &kp LBRC)
+THUMB_COMBO(l_num_11, L_THUMB, 11, &kp N4)
+THUMB_COMBO(l_sym_12, L_THUMB, 12, &kp STAR)
+THUMB_COMBO(l_num_12, L_THUMB, 12, &kp N0)
+THUMB_COMBO(l_sym_13, L_THUMB, 13, &kp RBRC)
+THUMB_COMBO(l_num_13, L_THUMB, 13, &kp N2)
+THUMB_COMBO(l_sym_14, L_THUMB, 14, &HT_Double_Bslash 0 GB_BSLH)
+THUMB_COMBO(l_sym_22, L_THUMB, 22, &HT_Double_LT 0 LT)
+THUMB_COMBO(l_sym_23, L_THUMB, 23, &HT_Double_Bang 0 EXCLAMATION)
+THUMB_COMBO(l_sym_24, L_THUMB, 24, &HT_Double_GT 0 GT)
+THUMB_COMBO(l_num_24, L_THUMB, 24, &kp N8)
+THUMB_COMBO(r_sym_5, R_THUMB, 5, &kp GB_POUND_SIGN)
+THUMB_COMBO(r_sym_6, R_THUMB, 6, &kp GB_AT_SIGN)
+THUMB_COMBO(r_num_6, R_THUMB, 6, &kp AT)
+THUMB_COMBO(r_sym_7, R_THUMB, 7, &HT_Double_Pipe 0 GB_PIPE)
+THUMB_COMBO(r_sym_8, R_THUMB, 8, &kp CARET)
+THUMB_COMBO(r_sym_15, R_THUMB, 15, &HT_Triple_Apostrophe 0 GRAVE)
+THUMB_COMBO(r_sym_16, R_THUMB, 16, &kp LPAR)
+THUMB_COMBO(r_num_16, R_THUMB, 16, &kp N3)
+THUMB_COMBO(r_sym_17, R_THUMB, 17, &kp QMARK)
+THUMB_COMBO(r_num_17, R_THUMB, 17, &kp N1)
+THUMB_COMBO(r_sym_18, R_THUMB, 18, &kp RPAR)
+THUMB_COMBO(r_num_18, R_THUMB, 18, &kp N5)
+THUMB_COMBO(r_sym_19, R_THUMB, 19, &HT_Double_Hash 0 GB_HASH)
+THUMB_COMBO(r_num_19, R_THUMB, 19, &kp N7)
+THUMB_COMBO(r_sym_26, R_THUMB, 26, &HT_Double_Underscore 0 UNDERSCORE)
+THUMB_COMBO(r_sym_27, R_THUMB, 27, &kp LBKT)
+THUMB_COMBO(r_num_27, R_THUMB, 27, &kp N9)
+THUMB_COMBO(r_sym_28, R_THUMB, 28, &kp AMPS)
+THUMB_COMBO(r_num_28, R_THUMB, 28, &kp J)
+THUMB_COMBO(r_sym_29, R_THUMB, 29, &kp RBKT)
+THUMB_COMBO(r_num_29, R_THUMB, 29, &kp K)
