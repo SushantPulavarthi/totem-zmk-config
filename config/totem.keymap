@@ -31,16 +31,6 @@
     tapping-term-ms = <170>;
 };
 
-// #define AS(keycode) &as_ht LS(keycode) keycode     // Autoshift Macro
-// #define L_THUMB 33
-// #define R_THUMB 36
-// #define THUMB_COMBO(NAME, THUMB_POS, KEY_POS, BINDING) \
-// combo_##NAME : NAME { \
-//     timeout-ms = <30>; \
-//     key-positions = <THUMB_POS KEY_POS>; \
-//     bindings = <BINDING>; \
-// };
-
 &num_word {
     continue-list = <
     BSPC DEL
@@ -428,6 +418,12 @@
             bindings = <&kp K>;
             key-positions = <33 29>;
         };
+
+        combo_flash_dongle {
+            bindings = <&bootloader>;
+            key-positions = <22 23 24 27 28 29>;
+            layers = <3>;
+        };
     };
 
     macros {
@@ -786,15 +782,6 @@
             tapping-term-ms = <250>;
         };
 
-        // as_ht: autoshift_hold_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping_term_ms = <250>;
-        //     quick-tap-ms = <150>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&kp>, <&kp>;
-        // };
-
         colon_switch_2: colon_switch_2 {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
@@ -818,6 +805,13 @@
             tapping-term-ms = <200>;
             bindings = <&triple_quote>, <&kp>;
         };
+
+        hold_flash: hold_flash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HOLD_FLASH";
+            #binding-cells = <0>;
+            bindings = <&trans>, <&bootloader>;
+        };
     };
 
     keymap {
@@ -834,7 +828,7 @@
         };
 
         sym_layer {
-            display-name = "SYMBOLS";
+            display-name = "SYM";
             bindings = <
         &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN        &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &trans
         &trans        &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR              &kp QMARK                  &kp RPAR   &HT_Double_Hash 0 GB_HASH
@@ -844,7 +838,7 @@
         };
 
         number_layer {
-            display-name = "NUMBERS";
+            display-name = "NUMS";
             bindings = <
         &trans  &kp PLUS  &kp MINUS  &kp PERCENT  &trans    &trans  &kp AT  &trans  &trans  &trans
         &kp N6  &kp N4    &kp N0     &kp N2       &trans    &trans  &kp N3  &kp N1  &kp N5  &kp N7
@@ -854,12 +848,12 @@
         };
 
         fun_layer {
-            display-name = "FUNCTIONS";
+            display-name = "FUNC";
             bindings = <
-        &trans  &trans  &trans   &trans  &trans     &trans   &trans  &trans  &trans  &trans
-        &as F6  &as F4  &as F10  &as F2  &as F12    &as F11  &as F3  &as F1  &as F5  &as F7
-&trans  &trans  &trans  &trans   &as F8  &trans     &trans   &as F9  &trans  &trans  &trans  &trans
-                        &trans   &trans  &trans     &trans   &trans  &trans
+        &trans  &trans  &trans   &trans  &hold_flash    &hold_flash  &trans  &trans  &trans  &trans
+        &as F6  &as F4  &as F10  &as F2  &as F12        &as F11      &as F3  &as F1  &as F5  &as F7
+&trans  &trans  &trans  &trans   &as F8  &trans         &trans       &as F9  &trans  &trans  &trans  &trans
+                        &trans   &trans  &trans         &trans       &trans  &trans
             >;
         };
 
@@ -884,7 +878,7 @@
         };
 
         game_layer {
-            display-name = "GAMING";
+            display-name = "GAME";
             bindings = <
         &mt TAB T  &kp Q  &kp W     &kp E      &kp R     &trans  &trans  &trans  &trans  &trans
         &kp LSHFT  &kp A  &kp S     &kp D      &kp F     &trans  &trans  &trans  &trans  &trans
@@ -894,32 +888,12 @@
         };
 
         game_num_layer {
-            display-name = "GAMING NUMS";
+            display-name = "G_NUMS";
             bindings = <
            &kp Y  &kp N1  &kp N2  &kp N3  &kp T     &trans  &trans  &trans  &trans  &trans
            &kp H  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
 &kp GRAVE  &kp N  &kp N7  &kp N8  &kp N9  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
                           &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        number_layer_2 {
-            display-name = "NUMBERS_2";
-            bindings = <
-        &trans  &kp N7  &kp N8  &kp N9  &trans       &trans  &kp GB_AT_SIGN  &trans  &trans  &trans
-        &kp N0  &kp N4  &kp N5  &kp N6  &kp LS(G)    &trans  &kp J           &kp K   &trans  &trans
-&trans  &trans  &kp N1  &kp N2  &kp N3  &kp V        &trans  &trans          &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &trans  &trans          &trans
-            >;
-        };
-
-        fun_layer_2 {
-            display-name = "FUNCTIONS_2";
-            bindings = <
-        &trans  &kp F7  &kp F8  &kp F9  &kp F12    &trans  &trans  &trans  &trans  &trans
-        &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans     &trans  &trans  &trans
             >;
         };
     };
