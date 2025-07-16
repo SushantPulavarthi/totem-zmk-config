@@ -46,7 +46,7 @@
 
         combo_flash_dongle {
             bindings = <&bootloader>;
-            key-positions = <1 24>;
+            key-positions = <0 25 26 9>;
         };
 
         combo_ctrl_del {
