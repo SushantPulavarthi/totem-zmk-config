@@ -1,6 +1,7 @@
 include:
   - board: seeeduino_xiao_ble
-    shield: totem_dongle prospector_adapter
+    # shield: totem_dongle prospector_adapter
+    shield: totem_dongle dongle_screen
   - board: seeeduino_xiao_ble
     shield: totem_left
   - board: seeeduino_xiao_ble
