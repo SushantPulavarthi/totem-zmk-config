@@ -209,9 +209,215 @@
             key-positions = <22 23 24 25 26 27 28 29>;
         };
 
-        test {
-            bindings = <&kp NUMBER_3>;
+        combo_l_sym_0 {
+            bindings = <&kp GB_TILDE>;
+            key-positions = <33 0>;
+        };
+
+        combo_l_sym_1 {
+            bindings = <&kp PLUS>;
+            key-positions = <33 1>;
+        };
+
+        combo_l_sym_2 {
+            bindings = <&kp MINUS>;
+            key-positions = <33 2>;
+        };
+
+        combo_l_sym_3 {
+            bindings = <&kp PERCENT>;
+            key-positions = <33 3>;
+        };
+
+        combo_l_sym_4 {
+            bindings = <&kp GB_DOLLAR>;
+            key-positions = <33 4>;
+        };
+
+        combo_l_sym_11 {
+            bindings = <&kp LBRC>;
+            key-positions = <33 11>;
+        };
+
+        combo_l_sym_12 {
+            bindings = <&kp STAR>;
+            key-positions = <33 12>;
+        };
+
+        combo_l_sym_13 {
+            bindings = <&kp RBRC>;
+            key-positions = <33 13>;
+        };
+
+        combo_l_sym_14 {
+            bindings = <&HT_Double_Bslash 0 GB_BSLH>;
+            key-positions = <33 14>;
+        };
+
+        combo_l_sym_22 {
+            bindings = <&HT_Double_LT 0 LT>;
+            key-positions = <33 22>;
+        };
+
+        combo_l_sym_23 {
+            bindings = <&HT_Double_Bang 0 EXCLAMATION>;
+            key-positions = <33 23>;
+        };
+
+        combo_l_sym_24 {
+            bindings = <&HT_Double_GT 0 GT>;
+            key-positions = <33 24>;
+        };
+
+
+
+        combo_l_num_1 {
+            bindings = <&kp PLUS>;
+            key-positions = <36 1>;
+        };
+
+        combo_l_num_2 {
+            bindings = <&kp MINUS>;
+            key-positions = <36 2>;
+        };
+
+        combo_l_num_3 {
+            bindings = <&kp PERCENT>;
+            key-positions = <36 3>;
+        };
+
+        combo_l_num_10 {
+            bindings = <&kp N6>;
+            key-positions = <36 10>;
+        };
+
+        combo_l_num_11 {
+            bindings = <&kp N4>;
+            key-positions = <36 11>;
+        };
+
+        combo_l_num_12 {
+            bindings = <&kp N0>;
+            key-positions = <36 12>;
+        };
+
+        combo_l_num_13 {
+            bindings = <&kp N2>;
+            key-positions = <36 13>;
+        };
+
+        combo_l_num_24 {
+            bindings = <&kp N8>;
+            key-positions = <36 24>;
+        };
+
+
+
+        combo_r_sym_5 {
+            bindings = <&kp GB_POUND_SIGN>;
+            key-positions = <36 5>;
+        };
+
+        combo_r_sym_6 {
+            bindings = <&kp GB_AT_SIGN>;
+            key-positions = <36 6>;
+        };
+
+        combo_r_sym_7 {
+            bindings = <&HT_Double_Pipe 0 GB_PIPE>;
+            key-positions = <36 7>;
+        };
+
+        combo_r_sym_8 {
+            bindings = <&kp CARET>;
+            key-positions = <36 8>;
+        };
+
+        combo_r_sym_15 {
+            bindings = <&HT_Triple_Apostrophe 0 GRAVE>;
+            key-positions = <36 15>;
+        };
+
+        combo_r_sym_16 {
+            bindings = <&kp LPAR>;
+            key-positions = <36 16>;
+        };
+
+        combo_r_sym_17 {
+            bindings = <&kp QMARK>;
+            key-positions = <36 17>;
+        };
+
+        combo_r_sym_18 {
+            bindings = <&kp RPAR>;
+            key-positions = <36 18>;
+        };
+
+        combo_r_sym_19 {
+            bindings = <&HT_Double_Hash 0 GB_HASH>;
+            key-positions = <36 19>;
+        };
+
+        combo_r_sym_26 {
+            bindings = <&HT_Double_Underscore 0 UNDERSCORE>;
+            key-positions = <36 26>;
+        };
+
+        combo_r_sym_27 {
+            bindings = <&kp LBKT>;
+            key-positions = <36 27>;
+        };
+
+        combo_r_sym_28 {
+            bindings = <&kp AMPS>;
+            key-positions = <36 28>;
+        };
+
+        combo_r_sym_29 {
+            bindings = <&kp RBKT>;
+            key-positions = <36 29>;
+        };
+
+
+
+        combo_r_num_6 {
+            bindings = <&kp AT>;
+            key-positions = <33 6>;
+        };
+
+        combo_r_num_16 {
+            bindings = <&kp N3>;
             key-positions = <33 16>;
+        };
+
+        combo_r_num_17 {
+            bindings = <&kp N1>;
+            key-positions = <33 17>;
+        };
+
+        combo_r_num_18 {
+            bindings = <&kp N5>;
+            key-positions = <33 18>;
+        };
+
+        combo_r_num_19 {
+            bindings = <&kp N7>;
+            key-positions = <33 19>;
+        };
+
+        combo_r_num_27 {
+            bindings = <&kp N9>;
+            key-positions = <33 27>;
+        };
+
+        combo_r_num_28 {
+            bindings = <&kp J>;
+            key-positions = <33 28>;
+        };
+
+        combo_r_num_29 {
+            bindings = <&kp K>;
+            key-positions = <33 29>;
         };
     };
 

@@ -38,8 +38,8 @@ def parse_layer(layer):
 # };
 def combo(name, thumb_pos, key_pos, binding):
     return f"""        combo_{name} {{
-            key-positions = <{thumb_pos} {key_pos}>;
             bindings = <{binding}>;
+            key-positions = <{thumb_pos} {key_pos}>;
         }};
 """
 
