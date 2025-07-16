@@ -25,5 +25,8 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_USB
     default y
 
+config DONGLE_SCREEN_WPM_ACTIVE
+    default n
+
 endif
 
