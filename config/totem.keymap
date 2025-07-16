@@ -46,8 +46,8 @@
     BSPC DEL
     DOT COMMA
     PLUS MINUS STAR FSLH EQUAL
-    J K AT_SIGN V G LS(G)
-    >;
+    // J K AT_SIGN V G LS(G)
+  >;
 };
 
 / {
