@@ -610,6 +610,43 @@
     };
 
     behaviors {
+        fmmv: fast_mouse_move {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <200>;
+            acceleration-exponent = <1>;
+        };
+
+        vmmv_up: variable_mouse_move_up {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mmv MOVE_UP>, <&fmmv MOVE_UP>;
+        };
+
+        vmmv_down: variable_mouse_move_down {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mmv MOVE_DOWN>, <&fmmv MOVE_DOWN>;
+        };
+
+        vmmv_left: variable_mouse_move_left {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mmv MOVE_LEFT>, <&fmmv MOVE_LEFT>;
+        };
+
+        vmmv_right: variable_mouse_move_right {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mmv MOVE_RIGHT>, <&fmmv MOVE_RIGHT>;
+        };
+
         numword_holdtap: numword_holdtap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
@@ -856,10 +893,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-        &trans           &kp PG_UP       &mmv MOVE_UP     &kp PG_DN             &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
-        &as PRINTSCREEN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT       &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
-&trans  &trans           &kp K_MUTE      &kp K_VOLUME_UP  &kp K_VOLUME_DOWN     &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
-                                         &trans           &numword_holdtap 5 2  &trans           &trans          &trans          &trans
+        &trans           &kp PG_UP    &vmmv_up         &kp PG_DN             &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
+        &as PRINTSCREEN  &vmmv_left   &vmmv_down       &vmmv_right           &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
+&trans  &trans           &kp K_MUTE   &kp K_VOLUME_UP  &kp K_VOLUME_DOWN     &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
+                                      &trans           &numword_holdtap 5 2  &trans           &trans          &trans          &trans
             >;
         };
 
