@@ -17,6 +17,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 #define BASE 0
 #define NAV  1
@@ -893,10 +894,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-        &trans           &kp PG_UP    &vmmv_up         &kp PG_DN             &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
-        &as PRINTSCREEN  &vmmv_left   &vmmv_down       &vmmv_right           &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
-&trans  &trans           &kp K_MUTE   &kp K_VOLUME_UP  &kp K_VOLUME_DOWN     &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
-                                      &trans           &numword_holdtap 5 2  &trans           &trans          &trans          &trans
+        &kt LG(Z)        &kp PG_UP   &vmmv_up         &kp PG_DN             &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
+        &as PRINTSCREEN  &vmmv_left  &vmmv_down       &vmmv_right           &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
+&trans  &kt LA(Z)        &kp K_MUTE  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN     &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
+                                     &trans           &numword_holdtap 5 2  &trans           &trans          &trans          &trans
             >;
         };
 
