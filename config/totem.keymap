@@ -92,7 +92,7 @@
         };
 
         combo_super_l {
-            bindings = <&sk LEFT_WIN>;
+            bindings = <&sk LGUI>;
             key-positions = <23 24>;
         };
 
@@ -129,7 +129,6 @@
         combo_close_window {
             bindings = <&quit>;
             key-positions = <22 23 24>;
-            layers = <1>;
         };
 
         combo_capsword {
@@ -138,12 +137,12 @@
         };
 
         combo_speech {
-            bindings = <&HT_DOUBLE_SPEECH 0 GB_DQT>;
+            bindings = <&HT_Triple_Speech 0 GB_DQT>;
             key-positions = <11 13>;
         };
 
         combo_quotes {
-            bindings = <&double_quote>;
+            bindings = <&HT_Triple_Quotes 0 SQT>;
             key-positions = <16 18>;
         };
 
@@ -433,7 +432,7 @@
         quit: quit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(W) &kp Q &kp ENTER>;
+            bindings = <&kp ESCAPE &kp GB_COLON &kp Q &kp ENTER>;
         };
 
         from: from {
@@ -520,7 +519,7 @@
             bindings = <&kp GB_DQT &kp GB_DQT &kp GB_DQT>;
         };
 
-        triple_quote: triple_quote {
+        triple_quotes: triple_quotes {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp SQT &kp SQT>;
@@ -603,7 +602,7 @@
             bindings = <&kp GB_DQT &kp GB_DQT>;
         };
 
-        double_quote: double_quote {
+        double_quotes: double_quotes {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp SQT>;
@@ -726,12 +725,12 @@
             bindings = <&triple_speech>, <&kp>;
         };
 
-        HT_Triple_Quote: ht_triple_quote {
+        HT_Triple_Quotes: ht_triple_quotes {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&triple_quote>, <&kp>;
+            bindings = <&triple_quotes>, <&kp>;
         };
 
         HT_Triple_Eq: ht_triple_eq {
@@ -798,14 +797,6 @@
             bindings = <&triple_apostrophe>, <&kp>;
         };
 
-        HT_underscore_hyphen: HT_underscore_hyphen {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
-
         as_ht: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&shifted>, <&kp>;
@@ -822,22 +813,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        HT_DOUBLE_SPEECH: HT_DOUBLE_SPEECH {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&double_speech>, <&kp>;
-        };
-
-        HT_DOUBLE_QUOTE: HT_DOUBLE_QUOTE {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&triple_quote>, <&kp>;
         };
 
         hold_toggle: hold_toggle {
