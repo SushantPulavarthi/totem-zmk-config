@@ -12,14 +12,13 @@
 
 #include <behaviors/num_word.dtsi>
 #include "keys_en_gb.h"
+#include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 #define BASE 0
 #define SYM 1
@@ -635,28 +634,28 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_UP>, <&mo FMMV>;
+            bindings = <&mmv MOVE_UP>, <&tog FMMV>;
         };
 
         vmmv_down: variable_mouse_move_down {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_DOWN>, <&mo FMMV>;
+            bindings = <&mmv MOVE_DOWN>, <&tog FMMV>;
         };
 
         vmmv_left: variable_mouse_move_left {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_LEFT>, <&mo FMMV>;
+            bindings = <&mmv MOVE_LEFT>, <&tog FMMV>;
         };
 
         vmmv_right: variable_mouse_move_right {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_RIGHT>, <&mo FMMV>;
+            bindings = <&mmv MOVE_RIGHT>, <&tog FMMV>;
         };
 
         numword_holdtap: numword_holdtap {
@@ -846,19 +845,19 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-              &as Q                    &as W  &as E      &as R            &as T        &as Y               &as U        &as I      &as O                 &as P
-              &as A                    &as S  &as D      &as F            &as G        &as H               &as J        &as K      &as L                 &mt GB_SEMICOLON GB_COLON
-&lt FUN ESCAPE  &mt KP_MINUS UNDERSCORE  &as X  &as C      &as V            &as B        &as N               &as M        &as COMMA  &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repeat
-                                              &kp LCTRL  &lt SYM BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt NAV SPACE  &kp TAB
+                &as Q                    &as W  &as E      &as R              &as T        &as Y               &as U          &as I      &as O                 &as P
+                &as A                    &as S  &as D      &as F              &as G        &as H               &as J          &as K      &as L                 &mt GB_SEMICOLON GB_COLON
+&lt FUN ESCAPE  &mt KP_MINUS UNDERSCORE  &as X  &as C      &as V              &as B        &as N               &as M          &as COMMA  &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repeat
+                                                &kp LCTRL  &lt SYM BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt NAV SPACE  &kp TAB
             >;
         };
 
         sym_layer {
             display-name = "SYM";
             bindings = <
-        &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN        &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &trans
-        &trans        &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR              &kp QMARK                  &kp RPAR   &HT_Double_Hash 0 GB_HASH
-&trans  &trans        &HT_Double_LT 0 LT  &HT_Double_Bang 0 EXCLAMATION  &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT              &kp AMPS                   &kp RBKT   &trans                     &trans
+        &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN             &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &trans
+        &trans        &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR                   &kp QMARK                  &kp RPAR   &HT_Double_Hash 0 GB_HASH
+&trans  &trans        &HT_Double_LT 0 LT  &HT_Double_Bang 0 EXCLAMATION  &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT                   &kp AMPS                   &kp RBKT   &trans                     &trans
                                           &trans                         &trans              &trans                         &trans                              &numword_holdtap WNAV NUM  &trans
             >;
         };
@@ -886,9 +885,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-        &kt LG(Z)        &kp PG_UP   &vmmv_up         &kp PG_DN             &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
-        &as PRINTSCREEN  &vmmv_left  &vmmv_down       &vmmv_right           &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
-&trans  &kt LA(Z)        &kp K_MUTE  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN     &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
+        &kt LG(Z)        &kp PG_UP   &vmmv_up         &kp PG_DN                  &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
+        &as PRINTSCREEN  &vmmv_left  &vmmv_down       &vmmv_right                &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
+&trans  &kt LA(Z)        &kp K_MUTE  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN          &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
                                      &trans           &numword_holdtap WNAV NUM  &trans           &trans          &trans          &trans
             >;
         };
@@ -906,19 +905,19 @@
         fmmv_layer {
             display-name = "FMMV";
             bindings = <
-        &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
-        &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
-&trans  &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans      &trans
-                                &trans      &trans      &trans    &trans  &trans      &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         game_layer {
             display-name = "GAME";
             bindings = <
-        &mt TAB T  &kp Q  &kp W     &kp E      &kp R     &trans  &trans  &trans  &trans  &trans
-        &kp LSHFT  &kp A  &kp S     &kp D      &kp F     &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X     &kp C      &kp V     &trans  &trans  &trans  &trans  &trans  &trans
+        &mt TAB T  &kp Q  &kp W          &kp E      &kp R     &trans  &trans  &trans  &trans  &trans
+        &kp LSHFT  &kp A  &kp S          &kp D      &kp F     &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X          &kp C      &kp V     &trans  &trans  &trans  &trans  &trans  &trans
                           &lt G_NUMS N2  &kp SPACE  &kp N1    &trans  &trans  &trans
             >;
         };
