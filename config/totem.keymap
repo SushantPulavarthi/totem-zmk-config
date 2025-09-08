@@ -12,19 +12,24 @@
 
 #include <behaviors/num_word.dtsi>
 #include "keys_en_gb.h"
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 #define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
-#define TVP1 4
-#define TVP2 5
+#define SYM 1
+#define NUM 2
+#define FUN 3
+#define NAV 4
+#define WNAV 5
+#define FMMV 6
+#define GAME 7
+#define G_NUMS 8
 
 &mt {
     quick-tap-ms = <100>;
@@ -40,6 +45,13 @@
     PLUS MINUS STAR FSLH EQUAL
     // J K AT_SIGN V G LS(G)
     >;
+};
+
+&mmv_input_listener {
+    fast {
+        layers = <FMMV>;
+        input-processors = <&zip_xy_scaler 2 1>;
+    };
 };
 
 / {
@@ -192,7 +204,7 @@
         };
 
         combo_game_layer {
-            bindings = <&tog 6>;
+            bindings = <&tog GAME>;
             key-positions = <0 21 30 9>;
         };
 
@@ -610,40 +622,41 @@
     };
 
     behaviors {
-        fmmv: fast_mouse_move {
-            compatible = "zmk,behavior-input-two-axis";
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            time-to-max-speed-ms = <150>;
-            acceleration-exponent = <1>;
-        };
+        // fmmv: fast_mouse_move {
+        //     compatible = "zmk,behavior-input-two-axis";
+        //     #binding-cells = <1>;
+        //     x-input-code = <INPUT_REL_X>;
+        //     y-input-code = <INPUT_REL_Y>;
+        //     time-to-max-speed-ms = <150>;
+        //     acceleration-exponent = <1>;
+        // };
 
         vmmv_up: variable_mouse_move_up {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_UP>, <&fmmv MOVE_UP>;
+            bindings = <&mmv MOVE_UP>, <&mo FMMV>;
         };
 
         vmmv_down: variable_mouse_move_down {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_DOWN>, <&fmmv MOVE_DOWN>;
+            bindings = <&mmv MOVE_DOWN>, <&mo FMMV>;
         };
 
         vmmv_left: variable_mouse_move_left {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_LEFT>, <&fmmv MOVE_LEFT>;
+            bindings = <&mmv MOVE_LEFT>, <&mo FMMV>;
         };
 
         vmmv_right: variable_mouse_move_right {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mmv MOVE_RIGHT>, <&fmmv MOVE_RIGHT>;
+            bindings = <&mmv MOVE_RIGHT>, <&mo FMMV>;
         };
 
         numword_holdtap: numword_holdtap {
@@ -657,7 +670,7 @@
         numword_tapdance: numword_tapdance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&numword_holdtap 5 2>, <&tog 2>;
+            bindings = <&numword_holdtap WNAV NUM>, <&tog NUM>;
         };
 
         colon_switch: colon_switch {
@@ -822,10 +835,10 @@
         };
     };
 
-    fmmv_input_listener: fmmv_input_listener {
-        compatible = "zmk,input-listener";
-        device = <&fmmv>;
-    };
+    // fmmv_input_listener: fmmv_input_listener {
+    //     compatible = "zmk,input-listener";
+    //     device = <&fmmv>;
+    // };
 
     keymap {
         compatible = "zmk,keymap";
@@ -835,8 +848,8 @@
             bindings = <
               &as Q                    &as W  &as E      &as R            &as T        &as Y               &as U        &as I      &as O                 &as P
               &as A                    &as S  &as D      &as F            &as G        &as H               &as J        &as K      &as L                 &mt GB_SEMICOLON GB_COLON
-&lt 3 ESCAPE  &mt KP_MINUS UNDERSCORE  &as X  &as C      &as V            &as B        &as N               &as M        &as COMMA  &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repeat
-                                              &kp LCTRL  &lt 1 BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt 4 SPACE  &kp TAB
+&lt FUN ESCAPE  &mt KP_MINUS UNDERSCORE  &as X  &as C      &as V            &as B        &as N               &as M        &as COMMA  &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repeat
+                                              &kp LCTRL  &lt SYM BACKSPACE  &kp LSHFT    &mt LEFT_ALT ENTER  &lt NAV SPACE  &kp TAB
             >;
         };
 
@@ -846,7 +859,7 @@
         &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN        &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &trans
         &trans        &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR              &kp QMARK                  &kp RPAR   &HT_Double_Hash 0 GB_HASH
 &trans  &trans        &HT_Double_LT 0 LT  &HT_Double_Bang 0 EXCLAMATION  &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT              &kp AMPS                   &kp RBKT   &trans                     &trans
-                                          &trans                         &trans              &trans                         &trans                              &numword_holdtap 5 2  &trans
+                                          &trans                         &trans              &trans                         &trans                              &numword_holdtap WNAV NUM  &trans
             >;
         };
 
@@ -876,7 +889,7 @@
         &kt LG(Z)        &kp PG_UP   &vmmv_up         &kp PG_DN             &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
         &as PRINTSCREEN  &vmmv_left  &vmmv_down       &vmmv_right           &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
 &trans  &kt LA(Z)        &kp K_MUTE  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN     &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
-                                     &trans           &numword_holdtap 5 2  &trans           &trans          &trans          &trans
+                                     &trans           &numword_holdtap WNAV NUM  &trans           &trans          &trans          &trans
             >;
         };
 
@@ -890,13 +903,23 @@
             >;
         };
 
+        fmmv_layer {
+            display-name = "FMMV";
+            bindings = <
+        &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
+        &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
+&trans  &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans      &trans
+                                &trans      &trans      &trans    &trans  &trans      &trans
+            >;
+        };
+
         game_layer {
             display-name = "GAME";
             bindings = <
         &mt TAB T  &kp Q  &kp W     &kp E      &kp R     &trans  &trans  &trans  &trans  &trans
         &kp LSHFT  &kp A  &kp S     &kp D      &kp F     &trans  &trans  &trans  &trans  &trans
 &trans  &kp LCTRL  &kp Z  &kp X     &kp C      &kp V     &trans  &trans  &trans  &trans  &trans  &trans
-                          &lt 7 N2  &kp SPACE  &kp N1    &trans  &trans  &trans
+                          &lt G_NUMS N2  &kp SPACE  &kp N1    &trans  &trans  &trans
             >;
         };
 
