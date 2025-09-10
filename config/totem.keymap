@@ -93,7 +93,7 @@
         };
 
         combo_tab {
-            bindings = <&mt TAB LS(TAB)>;
+            bindings = <&mt LS(TAB) TAB>;
             key-positions = <11 12 13>;
         };
 
