@@ -896,8 +896,8 @@
             display-name = "WNAV";
             bindings = <
         &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
-        &as LG(N6)  &as LG(N4)  &as LG(N0)  &as LG(N2)  &trans    &trans  &as LG(N3)  &as LG(N1)  &as LG(N5)  &as LG(N7)
-&trans  &trans      &trans      &trans      &as LG(N8)  &trans    &trans  &as LG(N9)  &trans      &trans      &trans      &trans
+        &as LG(N8)  &as LG(N6)  &as LG(N2)  &as LG(N4)  &trans    &trans  &as LG(N3)  &as LG(N1)  &as LG(N5)  &as LG(N7)
+&trans  &trans      &trans      &trans      &as LG(N0)  &trans    &trans  &as LG(N9)  &trans      &trans      &trans      &trans
                                 &trans      &trans      &trans    &trans  &trans      &trans
             >;
         };
