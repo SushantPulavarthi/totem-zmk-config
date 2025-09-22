@@ -1,12 +1,12 @@
 sym_layer = """
-        &kp GB_TILDE  &kp PLUS            &kp MINUS                      &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN  &HT_Double_Pipe 0 GB_PIPE  &kp CARET  &trans
-        &trans        &kp LBRC            &kp STAR                       &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR        &kp QMARK                  &kp RPAR   &HT_Double_Hash 0 GB_HASH
-&trans  &trans        &HT_Double_LT 0 LT  &HT_Double_Bang 0 EXCLAMATION  &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT        &kp AMPS                   &kp RBKT   &trans                     &trans
+        &kp GB_TILDE  &HT_Expand_Plus 0 PLUS  &HT_Expand_Minus 0 MINUS  &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN             &HT_Double_Pipe 0 GB_PIPE  &HT_Expand_Caret 0 CARET  &trans
+        &trans        &kp LBRC                &HT_Expand_Star 0 STAR    &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR                   &kp QMARK                  &kp RPAR                  &HT_Double_Hash 0 GB_HASH
+&trans  &trans        &HT_Double_LT 0 LT      &mt expand_excl EXCL      &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT                   &HT_Expand_Amps 0 AMPS     &kp RBKT                  &trans                     &trans
 """
 num_layer = """
         &trans  &kp PLUS  &kp MINUS  &kp PERCENT  &trans    &trans  &kp AT  &trans  &trans  &trans
         &kp N6  &kp N4    &kp N0     &kp N2       &trans    &trans  &kp N3  &kp N1  &kp N5  &kp N7
-&trans  &trans  &trans    &trans     &kp N8       &trans    &trans  &kp N9  &kp J   &kp K   &trans  &trans
+&trans  &trans  &trans    &trans     &kp N8       &trans    &trans  &kp N9  &kp J   &kp K   &HT_Double_Slash 0 SLASH  &trans
 """
 
 

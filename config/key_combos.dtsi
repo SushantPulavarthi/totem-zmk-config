@@ -4,12 +4,12 @@
         };
 
         combo_l_sym_1 {
-            bindings = <&kp PLUS>;
+            bindings = <&HT_Expand_Plus 0 PLUS>;
             key-positions = <33 1>;
         };
 
         combo_l_sym_2 {
-            bindings = <&kp MINUS>;
+            bindings = <&HT_Expand_Minus 0 MINUS>;
             key-positions = <33 2>;
         };
 
@@ -29,7 +29,7 @@
         };
 
         combo_l_sym_12 {
-            bindings = <&kp STAR>;
+            bindings = <&HT_Expand_Star 0 STAR>;
             key-positions = <33 12>;
         };
 
@@ -49,7 +49,7 @@
         };
 
         combo_l_sym_23 {
-            bindings = <&HT_Double_Bang 0 EXCLAMATION>;
+            bindings = <&mt expand_excl EXCL>;
             key-positions = <33 23>;
         };
 
@@ -118,7 +118,7 @@
         };
 
         combo_r_sym_8 {
-            bindings = <&kp CARET>;
+            bindings = <&HT_Expand_Caret 0 CARET>;
             key-positions = <36 8>;
         };
 
@@ -158,7 +158,7 @@
         };
 
         combo_r_sym_28 {
-            bindings = <&kp AMPS>;
+            bindings = <&HT_Expand_Amps 0 AMPS>;
             key-positions = <36 28>;
         };
 
@@ -207,4 +207,9 @@
         combo_r_num_29 {
             bindings = <&kp K>;
             key-positions = <33 29>;
+        };
+
+        combo_r_num_30 {
+            bindings = <&HT_Double_Slash 0 SLASH>;
+            key-positions = <33 30>;
         };
