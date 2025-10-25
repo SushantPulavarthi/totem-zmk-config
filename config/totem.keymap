@@ -56,10 +56,11 @@
 
 / {
     combos {
-//     0   1   2   3   4   5   6   7   8   9
-//     10  11  12  13  14  15  16  17  18  19
-// 20  21  22  23  24  25  26  27  28  29  30  31
-//             32  33  34  35  36  37
+        //     0   1   2   3   4   5   6   7   8   9
+        //     10  11  12  13  14  15  16  17  18  19
+        // 20  21  22  23  24  25  26  27  28  29  30  31
+        //             32  33  34  35  36  37
+
         compatible = "zmk,combos";
 
         combo_z {
@@ -302,8 +303,6 @@
             key-positions = <33 24>;
         };
 
-
-
         combo_l_num_1 {
             bindings = <&kp PLUS>;
             key-positions = <36 1>;
@@ -343,8 +342,6 @@
             bindings = <&kp N8>;
             key-positions = <36 24>;
         };
-
-
 
         combo_r_sym_5 {
             bindings = <&kp GB_POUND_SIGN>;
@@ -410,8 +407,6 @@
             bindings = <&kp RBKT>;
             key-positions = <36 29>;
         };
-
-
 
         combo_r_num_6 {
             bindings = <&kp AT>;
@@ -971,10 +966,10 @@
         fun_layer {
             display-name = "FUNC";
             bindings = <
-        &trans  &trans  &trans   &trans  &hold_toggle    &hold_toggle  &trans  &trans  &trans  &trans
-        &as F6  &as F4  &as F10  &as F2  &as F12         &as F11       &as F3  &as F1  &as F5  &as F7
-&trans  &trans  &trans  &trans   &as F8  &trans          &trans        &as F9  &trans  &trans  &trans  &trans
-                        &trans   &trans  &trans          &trans        &trans  &trans
+        &trans  &trans     &trans   &trans  &hold_toggle    &hold_toggle  &trans  &trans  &trans  &trans
+        &as F6  &as F4     &as F10  &as F2  &as F12         &as F11       &as F3  &as F1  &as F5  &as F7
+&trans  &trans  &as LC(Z)  &trans   &as F8  &trans          &trans        &as F9  &trans  &trans  &trans  &trans
+                           &trans   &trans  &trans          &trans        &trans  &trans
             >;
         };
 
@@ -1031,10 +1026,10 @@
         numpad_layer {
             display-name = "NUMPAD";
             bindings = <
-        &kp SLASH  &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SLASH &kp N7  &kp N8  &kp N9  &kp MINUS
-        &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS   &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
-&trans  &trans     &kp N1  &kp N2  &kp N3  &trans     &trans    &kp N1  &kp N2  &kp N3  &trans     &trans
-                           &trans  &kp N0  &kp DOT    &trans    &kp N0  &kp DOT
+        &kp SLASH  &as N7  &as N8  &as N9            &kp MINUS    &kp SLASH  &as N7        &as N8   &as N9  &kp MINUS
+        &kp STAR   &as N4  &as N5  &as N6            &kp PLUS     &kp STAR   &as N4        &as N5   &as N6  &kp PLUS
+&trans  &trans     &as N1  &as N2  &as N3            &trans       &trans     &as N1        &as N2   &as N3  &trans     &trans
+                           &trans  &mt BACKSPACE N0  &kp DOT      &trans     &mt SPACE N0  &kp DOT
             >;
         };
     };
