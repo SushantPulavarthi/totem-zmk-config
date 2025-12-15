@@ -916,13 +916,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
-        hold_toggle: hold_toggle {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HOLD_TOGGLE";
-            #binding-cells = <0>;
-            bindings = <&trans>, <&out OUT_TOG>;
-        };
     };
 
     // fmmv_input_listener: fmmv_input_listener {
@@ -966,7 +959,7 @@
         fun_layer {
             display-name = "FUNC";
             bindings = <
-        &trans  &trans     &trans   &trans  &hold_toggle    &hold_toggle  &trans  &trans  &trans  &trans
+        &trans  &trans     &trans   &trans  &out OUT_TOG    &out OUT_TOG  &trans  &trans  &trans  &trans
         &as F6  &as F4     &as F10  &as F2  &as F12         &as F11       &as F3  &as F1  &as F5  &as F7
 &trans  &trans  &as LC(Z)  &trans   &as F8  &trans          &trans        &as F9  &trans  &trans  &trans  &trans
                            &trans   &trans  &trans          &trans        &trans  &trans
