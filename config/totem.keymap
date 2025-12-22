@@ -959,7 +959,7 @@
         fun_layer {
             display-name = "FUNC";
             bindings = <
-        &trans  &trans     &trans   &trans  &out OUT_TOG    &out OUT_TOG  &trans  &trans  &trans  &trans
+        &trans  &trans     &tog 7   &trans  &out OUT_TOG    &out OUT_TOG  &trans  &trans  &trans  &trans
         &as F6  &as F4     &as F10  &as F2  &as F12         &as F11       &as F3  &as F1  &as F5  &as F7
 &trans  &trans  &as LC(Z)  &trans   &as F8  &trans          &trans        &as F9  &trans  &trans  &trans  &trans
                            &trans   &trans  &trans          &trans        &trans  &trans
@@ -999,10 +999,10 @@
         game_layer {
             display-name = "GAME";
             bindings = <
-        &mt TAB T  &kp Q  &kp W          &kp E      &kp R     &trans  &trans  &trans  &trans  &trans
-        &kp LSHFT  &kp A  &kp S          &kp D      &kp F     &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X          &kp C      &kp V     &trans  &trans  &trans  &trans  &trans  &trans
-                          &lt G_NUMS N2  &kp SPACE  &kp N1    &trans  &trans  &trans
+        &mt TAB T  &kp Q  &kp W          &kp E      &kp R       &trans  &trans  &trans  &trans  &trans
+        &kp LSHFT  &kp A  &kp S          &kp D      &kp F       &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X          &kp C      &kp V       &trans  &trans  &trans  &trans  &trans  &trans
+                          &lt G_NUMS N2  &kp SPACE  &lt 8 N1    &trans  &trans  &trans
             >;
         };
 
@@ -1012,7 +1012,7 @@
            &kp Y  &kp N1  &kp N2  &kp N3  &kp T     &trans  &trans  &trans  &trans  &trans
            &kp H  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
 &kp GRAVE  &kp N  &kp N7  &kp N8  &kp N9  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans    &trans  &trans  &trans
+                          &trans  &kp N0  &trans    &trans  &trans  &trans
             >;
         };
 
