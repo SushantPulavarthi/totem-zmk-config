@@ -930,19 +930,19 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-              &as Q  &as W  &as E  &as R          &as T                      &as Y        &as U      &as I            &as O                 &as P
-              &as A  &as S  &as D  &as F          &as G                      &as H        &as J      &as K            &as L                 &mt GB_SEMICOLON GB_COLON
-&lt FUN ESCAPE  &as Z  &as X  &as C  &as V          &as B                      &as N        &as M      &as COMMA        &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repeat
-                            &kp LSHIFT  &kp BACKSPACE  &mt KP_MINUS UNDERSCORE    &kp ENTER  &lt NAV SPACE  &mt LS(TAB) TAB
+                &as Q  &as W  &as E       &as R              &as T                      &as Y        &as U          &as I            &as O                 &as P
+                &as A  &as S  &as D       &as F              &as G                      &as H        &as J          &as K            &as L                 &mt GB_SEMICOLON GB_COLON
+&lt FUN ESCAPE  &as Z  &as X  &as C       &as V              &as B                      &as N        &as M          &as COMMA        &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repeat
+                              &kp LSHIFT  &lt SYM BACKSPACE  &mt KP_MINUS UNDERSCORE    &kp ENTER    &lt NAV SPACE  &mt LS(TAB) TAB
             >;
         };
 
         sym_layer {
             display-name = "SYM";
             bindings = <
-        &kp GB_TILDE  &HT_Expand_Plus 0 PLUS  &HT_Expand_Minus 0 MINUS  &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN          &HT_Double_Pipe 0 GB_PIPE  &HT_Expand_Caret 0 CARET  &trans
-        &trans        &kp LBRC                &HT_Expand_Star 0 STAR    &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR                &kp QMARK                  &kp RPAR                  &HT_Double_Hash 0 GB_HASH
-&trans  &trans        &HT_Double_LT 0 LT      &HT_Expand_Bang 0 EXCL    &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT                &HT_Expand_Amps 0 AMPS     &kp RBKT                  &trans                     &trans
+        &kp GB_TILDE  &HT_Expand_Plus 0 PLUS  &HT_Expand_Minus 0 MINUS  &kp PERCENT         &kp GB_DOLLAR                  &kp GB_POUND_SIGN                   &kp GB_AT_SIGN             &HT_Double_Pipe 0 GB_PIPE  &HT_Expand_Caret 0 CARET  &trans
+        &trans        &kp LBRC                &HT_Expand_Star 0 STAR    &kp RBRC            &HT_Double_Bslash 0 GB_BSLH    &HT_Triple_Apostrophe 0 GRAVE       &kp LPAR                   &kp QMARK                  &kp RPAR                  &HT_Double_Hash 0 GB_HASH
+&trans  &trans        &HT_Double_LT 0 LT      &HT_Expand_Bang 0 EXCL    &HT_Double_GT 0 GT  &trans                         &HT_Double_Underscore 0 UNDERSCORE  &kp LBKT                   &HT_Expand_Amps 0 AMPS     &kp RBKT                  &trans                     &trans
                                               &trans                    &trans              &trans                         &trans                              &numword_holdtap WNAV NUM  &trans
             >;
         };
@@ -971,18 +971,18 @@
             display-name = "FUNC";
             bindings = <
         &to GAME   &trans     &trans   &trans  &out OUT_TOG    &out OUT_TOG  &trans  &trans  &trans  &trans
-        &as F6  &as F4     &as F10  &as F2  &as F12         &as F11       &as F3  &as F1  &as F5  &as F7
-&trans  &trans  &as LC(Z)  &trans   &as F8  &trans          &trans        &as F9  &trans  &trans  &trans  &trans
-                           &trans   &trans  &trans          &trans        &trans  &trans
+        &as F6     &as F4     &as F10  &as F2  &as F12         &as F11       &as F3  &as F1  &as F5  &as F7
+&trans  &trans     &as LC(Z)  &trans   &as F8  &trans          &trans        &as F9  &trans  &trans  &trans  &trans
+                              &trans   &trans  &trans          &trans        &trans  &trans
             >;
         };
 
         nav_layer {
             display-name = "NAV";
             bindings = <
-        &kt LG(Z)        &kp PG_UP   &vmmv_up         &kp PG_DN               &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
-        &as PRINTSCREEN  &vmmv_left  &vmmv_down       &vmmv_right             &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
-&trans  &kt LA(Z)        &kp K_MUTE  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN       &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
+        &kt LG(Z)        &kp PG_UP   &vmmv_up         &kp PG_DN                  &kp HOME         &kp END         &mkp LCLK       &mkp RCLK     &mkp MCLK        &kp K_NEXT
+        &as PRINTSCREEN  &vmmv_left  &vmmv_down       &vmmv_right                &kp K_BACK       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp K_PLAY_PAUSE
+&trans  &kt LA(Z)        &kp K_MUTE  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN          &kp K_FORWARD    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp K_PREV        &trans
                                      &trans           &numword_holdtap WNAV NUM  &trans           &trans          &trans          &trans
             >;
         };
@@ -1010,10 +1010,10 @@
         game_layer {
             display-name = "GAME";
             bindings = <
-               &mt TAB T  &kp Q  &kp W     &kp E      &kp R       &trans  &trans  &trans  &trans  &trans
-               &kp LSHFT  &kp A  &kp S     &kp D      &kp F       &trans  &trans  &trans  &trans  &trans
-&lt G_FUN ESCAPE  &kp LCTRL  &kp Z  &kp X     &kp C      &kp V       &trans  &trans  &trans  &trans  &trans  &trans
-                                 &lt G_NUMS N2  &kp SPACE  &mt N8 N1    &trans  &trans  &trans
+                  &mt TAB T  &kp Q  &kp W          &kp E      &kp R        &trans  &trans  &trans  &trans  &trans
+                  &kp LSHFT  &kp A  &kp S          &kp D      &kp F        &trans  &trans  &trans  &trans  &trans
+&lt G_FUN ESCAPE  &kp LCTRL  &kp Z  &kp X          &kp C      &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                                    &lt G_NUMS N2  &kp SPACE  &mt N8 N1    &trans  &trans  &trans
             >;
         };
 
@@ -1030,9 +1030,9 @@
         game_fun_layer {
             bindings = <
         &to BASE   &kp F7  &kp F8   &kp F9  &kp F10    &trans  &trans  &trans  &trans  &trans
-        &trans  &kp F4  &kp F5   &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F1  &kp F12  &kp F3  &kp F12    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans   &trans  &trans     &trans  &trans  &trans
+        &trans     &kp F4  &kp F5   &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp F1  &kp F12  &kp F3  &kp F12    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans   &trans  &trans     &trans  &trans  &trans
             >;
 
             label = "G_FUN";
