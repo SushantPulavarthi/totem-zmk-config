@@ -23,13 +23,13 @@
 #define BASE 0
 #define SYM 1
 #define NUM 2
-#define FUN 3
-#define NAV 4
-#define WNAV 5
+#define NUMPAD 3
+#define FUN 4
+#define NAV 5
 #define FMMV 6
-#define GAME 7
-#define G_NUMS 8
-#define NUMPAD 9
+#define WNAV 7
+#define GAME 8
+#define G_NUMS 9
 #define G_FUN 10
 
 &mt {
@@ -957,6 +957,16 @@
             >;
         };
 
+        numpad_layer {
+            display-name = "NUMPAD";
+            bindings = <
+        &kp SLASH  &as N7  &as N8  &as N9            &kp MINUS    &kp SLASH  &as N7        &as N8   &as N9  &kp MINUS
+        &kp STAR   &as N4  &as N5  &as N6            &kp PLUS     &kp STAR   &as N4        &as N5   &as N6  &kp PLUS
+&trans  &trans     &as N1  &as N2  &as N3            &trans       &trans     &as N1        &as N2   &as N3  &trans     &trans
+                           &trans  &mt BACKSPACE N0  &kp DOT      &trans     &mt SPACE N0  &kp DOT
+            >;
+        };
+
         fun_layer {
             display-name = "FUNC";
             bindings = <
@@ -977,16 +987,6 @@
             >;
         };
 
-        wnav_layer {
-            display-name = "WNAV";
-            bindings = <
-        &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
-        &as LG(N8)  &as LG(N6)  &as LG(N2)  &as LG(N4)  &trans    &trans  &as LG(N3)  &as LG(N1)  &as LG(N5)  &as LG(N7)
-&trans  &trans      &trans      &trans      &as LG(N0)  &trans    &trans  &as LG(N9)  &trans      &trans      &trans      &trans
-                                &trans      &trans      &trans    &trans  &trans      &trans
-            >;
-        };
-
         fmmv_layer {
             display-name = "FMMV";
             bindings = <
@@ -994,6 +994,16 @@
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        wnav_layer {
+            display-name = "WNAV";
+            bindings = <
+        &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
+        &as LG(N8)  &as LG(N6)  &as LG(N2)  &as LG(N4)  &trans    &trans  &as LG(N3)  &as LG(N1)  &as LG(N5)  &as LG(N7)
+&trans  &trans      &trans      &trans      &as LG(N0)  &trans    &trans  &as LG(N9)  &trans      &trans      &trans      &trans
+                                &trans      &trans      &trans    &trans  &trans      &trans
             >;
         };
 
@@ -1014,16 +1024,6 @@
            &kp H  &kp N4  &kp N5  &kp N6  &kp G     &trans  &trans  &trans  &trans  &trans
 &kp GRAVE  &kp N  &kp N7  &kp N8  &kp N9  &kp B     &trans  &trans  &trans  &trans  &trans  &trans
                           &trans  &kp N0  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        numpad_layer {
-            display-name = "NUMPAD";
-            bindings = <
-        &kp SLASH  &as N7  &as N8  &as N9            &kp MINUS    &kp SLASH  &as N7        &as N8   &as N9  &kp MINUS
-        &kp STAR   &as N4  &as N5  &as N6            &kp PLUS     &kp STAR   &as N4        &as N5   &as N6  &kp PLUS
-&trans  &trans     &as N1  &as N2  &as N3            &trans       &trans     &as N1        &as N2   &as N3  &trans     &trans
-                           &trans  &mt BACKSPACE N0  &kp DOT      &trans     &mt SPACE N0  &kp DOT
             >;
         };
 
