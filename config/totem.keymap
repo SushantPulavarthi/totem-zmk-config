@@ -219,11 +219,6 @@
             key-positions = <33 34>;
         };
 
-        combo_numpad_right {
-            bindings = <&tog NUMPAD>;
-            key-positions = <35 36>;
-        };
-
         combo_flash_dongle {
             bindings = <&bootloader>;
             key-positions = <0 25 26 9>;
