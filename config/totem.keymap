@@ -1007,7 +1007,7 @@
             bindings = <
                   &mt TAB T  &kp Q  &kp W          &kp E      &kp R       &kp Y        &kp U          &kp I            &kp O                 &kp P
                   &kp LSHFT  &kp A  &kp S          &kp D      &kp F       &kp H        &kp J          &kp K            &kp L                 &mt GB_SEMICOLON GB_COLON
-&lt G_FUN ESCAPE  &kp LCTRL  &kp Z  &kp X          &kp C      &kp V       &kp N        &kp M          &kp COMMA        &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &key_repea
+&lt G_FUN ESCAPE  &kp LCTRL  &kp Z  &kp X          &kp C      &kp V       &kp N        &kp M          &kp COMMA        &HT_Triple_Dot 0 DOT  &HT_Double_Slash 0 SLASH   &trans
                                     &lt G_NUMS N2  &kp SPACE  &mt N8 N1   &trans  &trans  &trans
             >;
         };
