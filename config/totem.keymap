@@ -1116,20 +1116,20 @@
         game_mc_layer {
             display-name = "MC";
             bindings = <
-                  &mt TAB T  &kp N1 &kp N2         &kp N3     &kp N4       &trans  &trans  &trans  &trans  &trans
-                  &kp LCTRL  &kp Q  &kp W          &kp E      &kp R        &trans  &trans  &trans  &trans  &trans
-&lt G_MC2 ESCAPE  &kp LSHFT  &kp A  &kp S          &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &trans
-                                    &mt V N6       &kp SPACE  &mt G N5     &trans  &trans  &trans
+                  &mt G F5    &kp N1 &kp N2         &kp N3     &kp N4         &trans  &trans  &trans  &trans  &trans
+                  &kp LSHFT   &kp Q  &kp W          &kp E      &kp R          &trans  &trans  &trans  &trans  &trans
+&lt G_MC2 ESCAPE  &kp LCTRL   &kp A  &kp S          &kp D      &kp F          &trans  &trans  &trans  &trans  &trans  &trans
+                                     &kp N5         &kp SPACE  &mt LSHFT N6   &trans  &trans  &trans
             >;
         };
 
         game_mc_layer2 {
             display-name = "MC 2";
             bindings = <
-        &to BASE &kp N1  &kp N2     &kp SQT     &kp F4   &trans  &trans  &trans  &trans  &trans
-        &trans   &kp Y   &kp MCLK   &kp LALT    &kp G    &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &kp N   &kp C      &kp LSHFT   &kp B    &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans     &kp F5       &kp F3   &trans  &trans  &trans
+        &to BASE &kp N1  &kp N2     &kp SQT     &kp F    &trans  &trans  &trans  &trans  &trans
+        &kp T    &kp V   &kp MCLK   &kp LALT    &kp G    &trans  &trans  &trans  &trans  &trans
+&trans  &kp TAB  &kp N   &kp LSHFT  &kp C       &kp B    &trans  &kp LT  &trans  &kp GT  &trans  &trans
+                         &kp Y      &kp F4      &kp F3   &trans  &trans  &trans
             >;
         };
     };
