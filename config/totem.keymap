@@ -33,6 +33,8 @@
 #define G_FUN 10
 #define G_MC 11
 #define G_MC2 12
+#define COMBO_LAYERS <BASE SYM NUM NUMPAD FUN NAV FMMV WNAV GAME>
+
 
 &mt {
     quick-tap-ms = <100>;
@@ -69,146 +71,175 @@
         combo_z {
             bindings = <&kp Z>;
             key-positions = <21 22>;
+            layers = COMBO_LAYERS;
         };
 
         combo_dollar {
             bindings = <&kp DOLLAR>;
             key-positions = <28 29>;
+            layers = COMBO_LAYERS;
         };
 
         combo_speech {
             bindings = <&HT_Triple_Speech 0 GB_DQT>;
             key-positions = <11 13>;
+            layers = COMBO_LAYERS;
         };
 
         combo_quotes {
             bindings = <&HT_Triple_Quotes 0 SQT>;
             key-positions = <16 18>;
+            layers = COMBO_LAYERS;
         };
 
         combo_eq {
             bindings = <&HT_Double_Equal 0 EQUAL>;
             key-positions = <6 7>;
+            layers = COMBO_LAYERS;
         };
 
         combo_del {
             bindings = <&kp DEL>;
             key-positions = <13 14>;
+            layers = COMBO_LAYERS;
         };
 
         combo_ctrl_del {
             bindings = <&kp LC(DELETE)>;
             key-positions = <1 2 3>;
+            layers = COMBO_LAYERS;
         };
 
         combo_ctrl_w_r {
             bindings = <&kp LC(W)>;
             key-positions = <7 6 8>;
+            layers = COMBO_LAYERS;
         };
 
         combo_backspace_word {
             bindings = <&kp LC(BSPC)>;
             key-positions = <8 9>;
+            layers = COMBO_LAYERS;
         };
 
         combo_tab {
             bindings = <&mt LS(TAB) TAB>;
             key-positions = <11 12 13>;
+            layers = COMBO_LAYERS;
         };
 
         combo_ctrl_r {
             bindings = <&sk LCTRL>;
             key-positions = <17 18>;
+            layers = COMBO_LAYERS;
         };
 
         combo_ctrl_l {
             bindings = <&sk LCTRL>;
             key-positions = <11 12>;
+            layers = COMBO_LAYERS;
         };
 
         combo_super_l {
             bindings = <&sk LGUI>;
             key-positions = <23 24>;
+            layers = COMBO_LAYERS;
         };
 
         combo_super_r {
             bindings = <&sk LGUI>;
             key-positions = <27 28>;
+            layers = COMBO_LAYERS;
         };
 
         combo_alt_l {
             bindings = <&sk LEFT_ALT>;
             key-positions = <12 13>;
+            layers = COMBO_LAYERS;
         };
 
         combo_alt_r {
             bindings = <&sk LEFT_ALT>;
             key-positions = <16 17>;
+            layers = COMBO_LAYERS;
         };
 
         combo_shift_l {
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <24 25>;
+            layers = COMBO_LAYERS;
         };
 
         combo_shift_r {
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <26 27>;
+            layers = COMBO_LAYERS;
         };
 
         combo_leq {
             bindings = <&leq>;
             key-positions = <3 13>;
+            layers = COMBO_LAYERS;
         };
 
         combo_geq1 {
             bindings = <&geq1>;
             key-positions = <13 24>;
+            layers = COMBO_LAYERS;
         };
 
         combo_geq2 {
             bindings = <&geq2>;
             key-positions = <6 16>;
+            layers = COMBO_LAYERS;
         };
 
         combo_from {
             bindings = <&from>;
             key-positions = <2 12>;
+            layers = COMBO_LAYERS;
         };
 
         combo_to {
             bindings = <&combo_to>;
             key-positions = <7 17>;
+            layers = COMBO_LAYERS;
         };
 
         combo_hsplit {
             bindings = <&hsplit>;
             key-positions = <11 22>;
+            layers = COMBO_LAYERS;
         };
 
         combo_vsplit {
             bindings = <&vsplit>;
             key-positions = <22 23>;
+            layers = COMBO_LAYERS;
         };
 
         combo_write {
             bindings = <&write>;
             key-positions = <16 17 18>;
+            layers = COMBO_LAYERS;
         };
 
         combo_close_window {
             bindings = <&quit>;
             key-positions = <22 23 24>;
+            layers = COMBO_LAYERS;
         };
 
         combo_numword {
             bindings = <&numword_tapdance>;
             key-positions = <36 33>;
+            layers = COMBO_LAYERS;
         };
 
         combo_capsword {
             bindings = <&caps_word>;
             key-positions = <12 17>;
+            layers = COMBO_LAYERS;
         };
 
         combo_game_layer {
@@ -219,236 +250,283 @@
         combo_numpad_left {
             bindings = <&tog NUMPAD>;
             key-positions = <33 34>;
+            layers = COMBO_LAYERS;
         };
 
         combo_flash_dongle {
             bindings = <&bootloader>;
             key-positions = <0 25 26 9>;
+            layers = COMBO_LAYERS;
         };
 
         bt {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <22 23 24 25 26 27 28 29>;
+            layers = COMBO_LAYERS;
         };
 
         bt_prev {
             bindings = <&bt BT_PRV>;
             key-positions = <22 23 24 25>;
+            layers = COMBO_LAYERS;
         };
 
         bt_next {
             bindings = <&bt BT_NXT>;
             key-positions = <26 27 28 29>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_0 {
             bindings = <&kp GB_TILDE>;
             key-positions = <33 0>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_1 {
             bindings = <&HT_Expand_Plus 0 PLUS>;
             key-positions = <33 1>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_2 {
             bindings = <&HT_Expand_Minus 0 MINUS>;
             key-positions = <33 2>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_3 {
             bindings = <&kp PERCENT>;
             key-positions = <33 3>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_4 {
             bindings = <&kp GB_DOLLAR>;
             key-positions = <33 4>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_11 {
             bindings = <&kp LBRC>;
             key-positions = <33 11>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_12 {
             bindings = <&HT_Expand_Star 0 STAR>;
             key-positions = <33 12>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_13 {
             bindings = <&kp RBRC>;
             key-positions = <33 13>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_14 {
             bindings = <&HT_Double_Bslash 0 GB_BSLH>;
             key-positions = <33 14>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_22 {
             bindings = <&HT_Double_LT 0 LT>;
             key-positions = <33 22>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_23 {
             bindings = <&HT_Expand_Bang 0 EXCL>;
             key-positions = <33 23>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_sym_24 {
             bindings = <&HT_Double_GT 0 GT>;
             key-positions = <33 24>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_num_1 {
             bindings = <&kp PLUS>;
             key-positions = <36 1>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_num_2 {
             bindings = <&kp MINUS>;
             key-positions = <36 2>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_num_3 {
             bindings = <&kp PERCENT>;
             key-positions = <36 3>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_num_10 {
             bindings = <&kp N6>;
             key-positions = <36 10>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_num_11 {
             bindings = <&kp N4>;
             key-positions = <36 11>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_num_12 {
             bindings = <&kp N0>;
             key-positions = <36 12>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_num_13 {
             bindings = <&kp N2>;
             key-positions = <36 13>;
+            layers = COMBO_LAYERS;
         };
 
         combo_l_num_24 {
             bindings = <&kp N8>;
             key-positions = <36 24>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_5 {
             bindings = <&kp GB_POUND_SIGN>;
             key-positions = <36 5>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_6 {
             bindings = <&kp GB_AT_SIGN>;
             key-positions = <36 6>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_7 {
             bindings = <&HT_Double_Pipe 0 GB_PIPE>;
             key-positions = <36 7>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_8 {
             bindings = <&HT_Expand_Caret 0 CARET>;
             key-positions = <36 8>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_15 {
             bindings = <&HT_Triple_Apostrophe 0 GRAVE>;
             key-positions = <36 15>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_16 {
             bindings = <&kp LPAR>;
             key-positions = <36 16>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_17 {
             bindings = <&kp QMARK>;
             key-positions = <36 17>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_18 {
             bindings = <&kp RPAR>;
             key-positions = <36 18>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_19 {
             bindings = <&HT_Double_Hash 0 GB_HASH>;
             key-positions = <36 19>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_26 {
             bindings = <&HT_Double_Underscore 0 UNDERSCORE>;
             key-positions = <36 26>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_27 {
             bindings = <&kp LBKT>;
             key-positions = <36 27>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_28 {
             bindings = <&HT_Expand_Amps 0 AMPS>;
             key-positions = <36 28>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_sym_29 {
             bindings = <&kp RBKT>;
             key-positions = <36 29>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_6 {
             bindings = <&kp AT>;
             key-positions = <33 6>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_16 {
             bindings = <&kp N3>;
             key-positions = <33 16>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_17 {
             bindings = <&kp N1>;
             key-positions = <33 17>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_18 {
             bindings = <&kp N5>;
             key-positions = <33 18>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_19 {
             bindings = <&kp N7>;
             key-positions = <33 19>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_27 {
             bindings = <&kp N9>;
             key-positions = <33 27>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_28 {
             bindings = <&kp J>;
             key-positions = <33 28>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_29 {
             bindings = <&kp K>;
             key-positions = <33 29>;
+            layers = COMBO_LAYERS;
         };
 
         combo_r_num_30 {
             bindings = <&HT_Double_Slash 0 SLASH>;
             key-positions = <33 30>;
+            layers = COMBO_LAYERS;
         };
     };
 
