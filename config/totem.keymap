@@ -31,6 +31,8 @@
 #define GAME 8
 #define G_NUMS 9
 #define G_FUN 10
+#define G_MC 11
+#define G_MC2 12
 
 &mt {
     quick-tap-ms = <100>;
@@ -965,7 +967,7 @@
         fun_layer {
             display-name = "FUNC";
             bindings = <
-        &to GAME   &trans     &trans   &trans  &out OUT_TOG    &out OUT_TOG  &trans  &trans  &trans  &trans
+        &to G_MC   &trans     &trans   &trans  &out OUT_TOG    &out OUT_TOG  &trans  &trans  &trans  &trans
         &as F6     &as F4     &as F10  &as F2  &as F12         &as F11       &as F3  &as F1  &as F5  &as F7
 &trans  &trans     &as LC(Z)  &trans   &as F8  &trans          &trans        &as F9  &trans  &trans  &trans  &trans
                               &trans   &trans  &trans          &trans        &trans  &trans
@@ -1031,6 +1033,26 @@
             >;
 
             label = "G_FUN";
+        };
+
+        game_mc_layer {
+            display-name = "MC";
+            bindings = <
+                  &mt TAB T  &kp N1 &kp N2         &kp N3     &kp N4       &trans  &trans  &trans  &trans  &trans
+                  &kp LCTRL  &kp Q  &kp W          &kp E      &kp R        &trans  &trans  &trans  &trans  &trans
+&lt G_MC2 ESCAPE  &kp LSHFT  &kp A  &kp S          &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+                                    &mt V N6       &kp SPACE  &mt G N5     &trans  &trans  &trans
+            >;
+        };
+
+        game_mc_layer2 {
+            display-name = "MC 2";
+            bindings = <
+        &to BASE &kp N1  &kp N2     &kp SQT     &kp F4   &trans  &trans  &trans  &trans  &trans
+        &trans   &kp Y   &kp MCLK   &kp LALT    &kp G    &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &kp N   &kp C      &kp LSHFT   &kp B    &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans     &kp F5       &kp F3   &trans  &trans  &trans
+            >;
         };
     };
 };
