@@ -1124,10 +1124,10 @@
         game_mc_layer {
             display-name = "MC";
             bindings = <
-                  &long_mt G F5    &kp N1 &kp N2         &kp N3     &kp N4         &trans  &trans  &trans  &trans  &trans
+                  &mt G F5    &kp N1 &kp N2         &kp N3     &kp N4         &trans  &trans  &trans  &trans  &trans
                   &kp LSHFT   &kp Q  &kp W          &kp E      &kp R          &trans  &trans  &trans  &trans  &trans
 &lt G_MC2 ESCAPE  &kp LCTRL   &kp A  &kp S          &kp D      &kp F          &trans  &trans  &trans  &trans  &trans  &trans
-                                     &kp N5         &kp SPACE  &long_mt LSHFT N6   &trans  &trans  &trans
+                                     &kp N5         &kp SPACE  &kp N6   &trans  &trans  &trans
             >;
         };
 
