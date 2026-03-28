@@ -1135,7 +1135,7 @@
             display-name = "MC 2";
             bindings = <
         &to BASE &kp N1  &kp N2     &kp SQT     &kp F    &trans  &trans  &trans  &trans  &trans
-        &kp T    &kp V   &kp MCLK   &kp LALT    &kp G    &trans  &trans  &trans  &trans  &trans
+        &kp N0   &kp V   &mkp MCLK  &kp LALT    &kp G    &trans  &trans  &trans  &trans  &trans
 &trans  &kp TAB  &kp N   &kp LSHFT  &kp C       &kp B    &trans  &kp LT  &trans  &kp GT  &trans  &trans
                          &kp Y      &kp F4      &kp F3   &trans  &trans  &trans
             >;
