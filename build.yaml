@@ -7,3 +7,6 @@ include:
     shield: totem_right
   - board: seeeduino_xiao_ble
     shield: settings_reset
+  - board: seeeduino_xiao_ble
+    shield: tester_xiao
+
